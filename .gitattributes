@@ -1,0 +1,2 @@
+# Normaliza os documentos em LF no repositorio, independente do SO de quem edita.
+*.md text eol=lf

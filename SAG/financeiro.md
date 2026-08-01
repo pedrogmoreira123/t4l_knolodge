@@ -11,7 +11,7 @@ Guia completo das funcionalidades do módulo Financeiro do SAG. Aqui você encon
 3. [Efetivar Contas](#3-efetivar-contas)
 4. [Transferência Bancária](#4-transferência-bancária)
 5. [Ajuste de Conta](#5-ajuste-de-conta)
-6. [Conciliação Bancária](#6-conciliação-bancária)
+6. [Conciliação Bancária e de Recebíveis](#6-conciliação-bancária)
 7. [Lançamento de Comissões](#7-lançamento-de-comissões)
 8. [Faturas](#8-faturas)
 9. [Cadastros de Apoio](#9-cadastros-de-apoio)
@@ -66,7 +66,7 @@ Use esta aba quando a conta se repete ao longo do tempo, como aluguel, mensalida
 
 ## 2. Extrato Financeiro
 
-**Financeiro → Extrato**
+**Financeiro → Extratos**
 
 > **Use o Extrato para consultar lançamentos.** Sempre que o cliente quiser localizar, verificar ou gerenciar entradas/saídas — baixas em aberto, vencidas, efetivadas — o caminho correto é aqui, não em Contas a Pagar/Receber.
 
@@ -121,7 +121,7 @@ Use **Exportar Excel** para baixar os dados filtrados em planilha.
 
 ## 3. Efetivar Contas
 
-**Financeiro → Efetivar Contas** ou pelo botão **Efetivar Vários** no Extrato
+Pelo botão **Efetivar Vários** dentro de **Financeiro → Extratos** (não existe um card "Efetivar Contas" no menu)
 
 Permite efetivar várias contas ao mesmo tempo, com a possibilidade de informar acréscimos (juros) e descontos individuais.
 
@@ -212,11 +212,17 @@ Compara os valores apurados nas vendas (por espécie: cartão, dinheiro, PIX, et
 
 O rodapé exibe o **Total Apurado**, **Total Inserido** e as **Diferenças**.
 
+### Conciliação de Recebíveis
+
+**Financeiro → Conciliação de Recebíveis**
+
+Tela separada da Conciliação Bancária. Serve para conferir os **recebíveis de cartão** — o que a adquirente informa que vai depositar contra o que o SAG registrou nas vendas por espécie.
+
 ---
 
 ## 7. Lançamento de Comissões
 
-**Financeiro → Lançamento de Comissões**
+**Relatórios → Comissões**
 
 Calcula e lança as comissões dos funcionários com base nos fechamentos de caixa do período.
 
@@ -247,7 +253,7 @@ Clique em **Salvar** para registrar as comissões.
 
 ## 8. Faturas
 
-**Financeiro → Faturas**
+**Financeiro → Central de Faturas**
 
 Permite emitir cobranças com código de barras ou por integração com serviços de cobrança (como PJBank), enviá-las por e-mail e controlar o recebimento.
 
@@ -272,7 +278,7 @@ Agrupa faturas para envio em lote ao banco (arquivo de remessa). Utilizado quand
 
 ### 9.1 Contas Bancárias
 
-**Financeiro → Cadastros → Contas Bancárias**
+**Financeiro → Contas Bancárias**
 
 | Campo | O que preencher |
 |---|---|
@@ -287,7 +293,7 @@ Agrupa faturas para envio em lote ao banco (arquivo de remessa). Utilizado quand
 
 ### 9.2 Categorias Financeiras
 
-**Financeiro → Cadastros → Categorias**
+**Financeiro → Categorias**
 
 Organizam os lançamentos em grupos para relatórios e DRE. A estrutura é hierárquica — você pode criar categorias principais e subcategorias.
 
@@ -303,7 +309,7 @@ Você pode **arrastar e soltar** as categorias para reorganizá-las. Clique duas
 
 ### 9.3 Espécies de Pagamento
 
-**Financeiro → Cadastros → Espécies**
+**Financeiro → Espécies**
 
 Cadastre e gerencie as formas de pagamento disponíveis (dinheiro, cartão, PIX, boleto, cheque, etc.).
 
@@ -315,7 +321,7 @@ Cadastre e gerencie as formas de pagamento disponíveis (dinheiro, cartão, PIX,
 
 ### 9.4 Período Contábil
 
-**Financeiro → Extrato → Opções → Período Contábil**
+**Financeiro → Extratos → Opções → Período Contábil**
 
 Define uma data de bloqueio: nenhum lançamento poderá ser inserido com data anterior à configurada aqui. Protege o histórico financeiro já encerrado de alterações acidentais.
 
@@ -328,9 +334,9 @@ Define uma data de bloqueio: nenhum lançamento poderá ser inserido com data an
 
 ## 10. Relatórios Financeiros
 
-**Relatórios → Financeiro**
+**Financeiro → Relatórios**
 
-O módulo oferece 8 análises financeiras. Todos possuem o botão **Gerar Relatório** para exportar ou imprimir.
+O módulo oferece 9 análises financeiras. Todos possuem o botão **Gerar Relatório** para exportar ou imprimir.
 
 ---
 
@@ -428,13 +434,19 @@ Agrupa as contas a pagar por grupo de fornecedor, facilitando a visão de quanto
 
 ---
 
+### Curva ABC de Fornecedor
+
+Classifica os fornecedores em A/B/C conforme a representatividade no valor total pago no período. Use para identificar quais fornecedores concentram a maior parte do gasto.
+
+---
+
 ## Terminologia: Centro de Custo
 
 Clientes frequentemente usam o termo **"centro de custo"** para se referir ao campo **Categoria Financeira** do SAG. No sistema, não existe uma funcionalidade com esse nome — o controle por centro de custo é feito por meio das Categorias (seção 9.2).
 
 Quando o cliente perguntar sobre "centro de custo", entenda como:
 - **Vincular centro de custo a uma conta** → preencher o campo **Categoria** ao lançar em Contas a Pagar ou Receber.
-- **Criar ou gerenciar centros de custo** → cadastrar/editar Categorias em **Financeiro → Cadastros → Categorias**.
+- **Criar ou gerenciar centros de custo** → cadastrar/editar Categorias em **Financeiro → Categorias**.
 - **Relatório por centro de custo** → usar o relatório de **DRE** ou **Extrato** filtrando por Categoria.
 
 ---

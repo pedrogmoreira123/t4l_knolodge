@@ -14,9 +14,10 @@ Guia completo das funcionalidades do módulo de Estoque do SAG. Aqui você encon
 6. [Pedido de Compra](#6-pedido-de-compra)
 7. [Cotação de Produtos](#7-cotação-de-produtos)
 8. [Consultas](#8-consultas)
-9. [Análise de Preço](#9-análise-de-preço)
+9. [Análise de Preços](#9-análise-de-preços)
 10. [Locais de Estoque](#10-locais-de-estoque)
-11. [Relatórios de Estoque](#11-relatórios-de-estoque)
+11. [Outras telas do módulo](#11-outras-telas-do-módulo)
+12. [Relatórios de Estoque](#12-relatórios-de-estoque)
 
 ---
 
@@ -77,7 +78,7 @@ Ao terminar de adicionar todos os produtos, clique em **Salvar** para confirmar 
 
 ## 2. Saída de Estoque
 
-**Estoque → Saída de Estoque**
+**Estoque → Saída de Produtos → Nova Saída de Produto**
 
 Utilize esta tela para registrar saídas de produtos do estoque que **não são originadas por vendas no caixa** — por exemplo: amostras enviadas, produtos usados internamente, perdas identificadas manualmente ou devoluções a fornecedor.
 
@@ -118,7 +119,7 @@ O ajuste de estoque é utilizado quando a quantidade registrada no sistema não 
 
 ## 4. Inventário de Produtos
 
-**Estoque → Inventário de Produtos**
+**Estoque → Inventário**
 
 O inventário é o processo de contar fisicamente todos os produtos do estoque e atualizar o sistema com as quantidades reais. É recomendado realizá-lo periodicamente para manter o estoque sempre preciso.
 
@@ -206,7 +207,7 @@ O sistema oferece três ferramentas no menu **Ferramentas** para auxiliar no pre
 
 ## 7. Cotação de Produtos
 
-**Estoque → Cotação de Produtos**
+**Estoque → Cotação → Nova Cotação**
 
 A cotação permite comparar preços do mesmo produto entre diferentes fornecedores, facilitando a decisão de compra pelo melhor custo.
 
@@ -254,7 +255,7 @@ Clique em **Filtrar** para buscar. Dê **duplo clique** em uma nota para abri-la
 
 ### 8.2 Consulta de Saídas
 
-**Estoque → Consulta de Saídas**
+**Estoque → Saída de Produtos**
 
 Pesquise as saídas avulsas de estoque registradas no sistema.
 
@@ -266,7 +267,7 @@ Pesquise as saídas avulsas de estoque registradas no sistema.
 
 ### 8.3 Consulta de Pedidos de Compra
 
-**Estoque → Consulta de Pedidos de Compra**
+**Estoque → Pedido de Compra**
 
 Pesquise os pedidos de compra criados, filtrando por fornecedor e período.
 
@@ -274,15 +275,15 @@ Pesquise os pedidos de compra criados, filtrando por fornecedor e período.
 
 ### 8.4 Consulta de Cotações
 
-**Estoque → Consulta de Cotações**
+**Estoque → Cotação**
 
 Pesquise e acesse cotações já salvas para reutilizá-las ou compará-las.
 
 ---
 
-## 9. Análise de Preço
+## 9. Análise de Preços
 
-**Estoque → Análise de Preço**
+**Estoque → Análise de Preços**
 
 Permite revisar e ajustar os preços de venda dos produtos com base no custo atual e no mark-up mínimo configurado. Ideal para atualizar preços em massa após uma entrada de nota com novos custos.
 
@@ -315,11 +316,24 @@ Na lista, você pode **alterar** o nome de um local ou **excluir** locais que n�
 
 ---
 
-## 11. Relatórios de Estoque
+## 11. Outras telas do módulo
 
-**Relatórios → Estoque**
+| Tela | Caminho | Para que serve |
+|---|---|---|
+| **Estoque atual** | Estoque → Estoque atual | Consulta rápida do saldo atual dos produtos |
+| **Produtos Fornecedores** | Estoque → Produtos Fornecedores | Vínculo entre os produtos do SAG e os códigos/descrições usados por cada fornecedor |
+| **Transferência de Estoque Multiloja** | Estoque → Transferência de Estoque Multiloja | Transfere produtos entre **filiais** da rede (a Transferência de Estoque comum é só entre locais da mesma loja) |
+| **CFOP Parametrização** | Estoque → CFOP Parametrização | Define como cada CFOP se comporta na entrada de nota (se movimenta estoque, se gera financeiro, etc.) |
+
+---
+
+## 12. Relatórios de Estoque
+
+**Estoque → Relatórios**
 
 O módulo de relatórios oferece 14 análises diferentes sobre o estoque. Todos os relatórios possuem o botão **Gerar Relatório** no canto inferior da tela.
+
+> Este é o card **Relatórios** dentro da aba **Estoque** — não confunda com a aba Relatórios da barra superior.
 
 ---
 
@@ -413,7 +427,7 @@ Exibe o histórico de transferências realizadas entre locais de estoque.
 
 ---
 
-### Inventário de Estoque
+### Inventário Estoque
 
 Exibe o histórico de inventários realizados, com as quantidades antes e depois da contagem.
 
@@ -436,7 +450,7 @@ Relatório completo com **todas** as movimentações do estoque (entradas, saíd
 
 ---
 
-### Multiloja — Estoque Consolidado
+### Multiloja - Estq. Consolidado
 
 Disponível apenas para estabelecimentos com mais de uma filial. Exibe o estoque consolidado de todas as unidades em uma única visão.
 
@@ -444,7 +458,7 @@ Disponível apenas para estabelecimentos com mais de uma filial. Exibe o estoque
 
 ---
 
-### Lote — Validade
+### Lote - Validade
 
 Exibe os produtos controlados por lote, com suas datas de vencimento. Ideal para gestão de produtos perecíveis e controle do prazo de validade.
 

@@ -65,7 +65,7 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 2. Feche o SAG completamente
 3. Aguarde alguns segundos e abra novamente
 4. Tente novamente com as credenciais corretas
-5. Se necessário, o administrador redefine a senha em: **Usuários > selecione o usuário > altere a senha**
+5. Se necessário, o administrador redefine a senha em: **Outros > Central de Usuários > selecione o usuário > altere a senha**
 
 ---
 
@@ -79,7 +79,7 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 3. Se aparecer o botão **Validar Online**, clique nele
 4. Feche o SAG completamente e abra novamente
 5. Tente emitir novamente
-6. Se erro for "produto sem configuração fiscal": acesse **Cadastros > Produtos > aba Impostos NFE/NFCE** e corrija o CST e CFOP
+6. Se erro for "produto sem configuração fiscal": acesse **Cadastros > Produtos > aba Impostos** e verifique o **Grupo de Imposto** vinculado — é dentro dele que ficam CST e CFOP
 
 ---
 
@@ -152,10 +152,10 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 **Sintomas:** Relatório do SAG não bate com extrato fiscal ou caixa.
 
 **Solução:**
-1. Acesse: **Relatórios > Consultas**, filtre pelo período exato
-2. Compare com o relatório SAT/NFC-e separadamente
-3. Para verificação cupom a cupom: **Relatórios > Cupons Emitidos**
-4. Gere o XML do período: **Outros > Ferramentas CFe > Arquivos XML**
+1. Acesse: **Relatórios > Consultas > Vendas**, filtre pelo período exato
+2. Compare com o relatório de NFC-e separadamente
+3. Para verificação cupom a cupom: **Relatórios > Notas > Geral**
+4. Gere o XML do período: **Outros > Exportar XML**
 5. Se houver diferença de CNPJ, filtre por estabelecimento separadamente
 
 ---
@@ -231,10 +231,12 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 **Sintomas:** Usuário tenta acessar uma função e recebe mensagem de "sem permissão".
 
 **Solução:**
-1. O administrador deve acessar: **Usuários > Grupos de Permissão**
+1. O administrador deve acessar: **Outros > Grupo de Permissões**
 2. Selecione o grupo do usuário
-3. Habilite a permissão necessária
-4. O usuário deve fazer logout e login novamente para as permissões serem aplicadas
+3. Habilite a permissão necessária na aba de setor correspondente e salve
+4. O usuário deve fazer **logout e login novamente** — as permissões são carregadas no login, então a alteração não vale para quem já está logado
+
+> Se a função não aparece nem para o administrador, o problema não é permissão. Ex.: abas técnicas do Config. Terminal/Global só aparecem com **Configurações Avançadas** marcado (exige senha técnica).
 
 ---
 
@@ -267,13 +269,14 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 **Sintomas:** Contador solicita XML, não sabe como gerar.
 
 **Solução:**
-1. Acesse: **Outros > Ferramentas CFe > Arquivos XML**
-2. Defina o período (mês de referência)
-3. Marque: **Compactar em arquivo único**
-4. Marque: **Enviar por e-mail**
-5. Informe o e-mail do contador
-6. Clique em **Gerar**
-7. O arquivo ZIP com os XMLs será enviado automaticamente
+1. Acesse: **Outros > Exportar XML**
+2. Defina o período em **Início** e **Término** (mês de referência)
+3. Marque os tipos: **NFCe**, **NFE - Emitidas** e/ou **NFE - Recebidas**
+4. Marque as opções necessárias: **Incluir Canceladas**, **Incluir Relatório**, **Incluir Inutilizadas**, **Incluir DANFE**
+5. Marque **Enviar arquivos por email** e informe o e-mail do contador (ou escolha uma pasta de destino em **Selecionar...**)
+6. Clique em **gerar**
+
+> **Ferramentas CFe** é para SAT/CF-e, que foi descontinuado — não use esse caminho para gerar XML de NFC-e/NF-e.
 
 ---
 
@@ -335,14 +338,14 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 
 ---
 
-## 28. "Cupom de Desconto Indisponível para Uso!"
+## 25. "Cupom de Desconto Indisponível para Uso!"
 
 **Sintomas:** Mensagem de aviso ao tentar usar cupom de desconto no caixa.
 
 **Causa:** O cupom atingiu o limite de usos cadastrado ou não existe no sistema.
 
 **Solução:**
-1. Acesse **Cadastros > Cupom de Desconto**
+1. Acesse **Cadastros > Cupom Desconto**
 2. Localize o cupom utilizado
 3. Verifique se está **ativo** e se ainda há **usos disponíveis**
 4. Se necessário, aumente o limite de usos ou cadastre um novo cupom
@@ -356,8 +359,8 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 **Solução:**
 1. Identifique o produto que está causando o erro (normalmente a mensagem indica o item)
 2. Acesse **Cadastros > Produtos** > selecione o produto
-3. Vá até a aba **Impostos NFE/NFCE**
-4. Verifique se os campos **CST** e **CFOP** estão preenchidos corretamente
+3. Vá até a aba **Impostos**
+4. Verifique o **Grupo de Imposto** vinculado e, dentro dele (botão **Editar**), se **CST** e **CFOP** estão preenchidos corretamente
 5. Em caso de dúvida sobre os valores corretos, consulte a **contabilidade**
 6. Salve e tente emitir novamente
 
@@ -380,7 +383,7 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 
 ---
 
-## 25. "Comanda Inexistente" no App (Celular/Tablet)
+## 28. "Comanda Inexistente" no App (Celular/Tablet)
 
 **Sintomas:** Ao tentar lançar produtos pelo app no celular ou tablet, aparece erro "Comanda inexistente" mesmo para comandas que existem no sistema.
 
@@ -390,7 +393,7 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 
 ---
 
-## 30. "Falha na Comunicação com a API" no App (Celular/Tablet/Terminal)
+## 29. "Falha na Comunicação com a API" no App (Celular/Tablet/Terminal)
 
 **Sintomas:** Faixa vermelha "Falha na comunicação com a API" ao logar ou usar o SAG Mobile / SAG Terminal.
 
@@ -405,7 +408,7 @@ Baseado em 6 meses de histórico de atendimentos de suporte.
 
 ---
 
-## 29. "Não Consigo Alterar o Preço da Pizza" (campo Preço de Venda bloqueado)
+## 30. "Não Consigo Alterar o Preço da Pizza" (campo Preço de Venda bloqueado)
 
 **Sintomas:** Operador tenta alterar o preço de venda de um produto que é uma pizza (ex.: "Pizza clássica de atum especial"), mas não consegue mexer no campo de preço na aba **Geral**.
 

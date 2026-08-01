@@ -61,10 +61,12 @@ Define a configuração tributária do produto por estabelecimento. Não há cam
 > Para criar ou editar grupos, consulte [Grupo de Imposto](grupo-de-imposto.md).
 
 ### Cadastro de Pizza
-**Caminho:** Cadastros > **Pizzas**
+**Caminho:** Cadastros > **Gerenciador de Pizzas**
 - Cadastro de **Tamanhos**
 - Cadastro de **Sabores** com preços por tamanho
 - Cadastro de **Acompanhamentos** (bordas, extras)
+
+> O módulo é ligado em **Config. Global → Módulos → Modulo Pizzaria**, onde também se define o **Cálculo da Pizza** (pelo sabor de **maior** valor ou pela **média** dos sabores) e o **Cálculo dos Acompanhamentos** (Valor Cheio ou Valor por Partição).
 
 #### Aba Pizza no Cadastro do Produto
 
@@ -163,8 +165,8 @@ Campos principais:
 
 - Cada grupo define quais módulos e ações o usuário pode realizar
 - Exemplos de grupos: Administrador, Caixa, Gerente, Suporte
-- Para alterar permissões: selecione o grupo > marque/desmarque as funcionalidades por aba de setor
-- Alterações no grupo aplicam-se **imediatamente** a todos os usuários vinculados, sem necessidade de relogar
+- Para alterar permissões: selecione o grupo > marque/desmarque as funcionalidades nas **14 abas de setor**
+- Alterações no grupo só valem para o operador **após ele sair e entrar de novo** — as permissões são lidas no login
 
 > Para o detalhamento completo de cada permissão disponível, consulte [Grupos de Permissão](grupos-permissoes.md).
 
@@ -188,7 +190,7 @@ Gera um cartão em PDF com o logo da loja e um código de barras vinculado ao us
 
 ## Cadastro de Promoções
 
-**Caminho:** Cadastros > **Promoções**
+**Caminho:** Cadastros > **Promoção**
 
 - Configure produtos com preço especial em períodos definidos
 - Campos: produto, valor promocional, data início, data fim, dias da semana
@@ -198,20 +200,22 @@ Gera um cartão em PDF com o logo da loja e um código de barras vinculado ao us
 
 ## Cupons de Desconto
 
-**Caminho:** Cadastros > **Cupons de Desconto**
+**Caminho:** Cadastros > **Cupom Desconto**
 
 - Código do cupom
 - Tipo de desconto (percentual ou valor fixo)
 - Validade
 - Limite de uso
 
+> No caixa, o cupom é aplicado pelo **F5** na tela de formas de pagamento.
+
 ---
 
 ## Cadastro de Estabelecimentos / Filiais
 
-**Caminho:** Cadastros > **Estabelecimentos**
+**Caminho:** Outros > **Configurações de Estabelecimentos**
 
-Usado em ambiente multiloja para cadastrar filiais e suas configurações específicas.
+Usado em ambiente multiloja para cadastrar filiais e suas configurações específicas. **Não fica na aba Cadastros.**
 
 ---
 
@@ -220,3 +224,19 @@ Usado em ambiente multiloja para cadastrar filiais e suas configurações espec�
 **Caminho:** Cadastros > **Transportadoras** / **Entregadores**
 
 Usado no módulo de delivery e romaneio de entregas.
+
+---
+
+## Demais cadastros da aba Cadastros
+
+Além dos já descritos, a aba **Cadastros** tem:
+
+| Cadastro | Para que serve |
+|---|---|
+| **Grupos** | Grupos e subgrupos de produtos |
+| **Programa de Fidelidade** | Configuração do programa de pontos — ver [Programa de Fidelidade](fidelidade.md) |
+| **Alteração de Preço Programada** | Agenda alterações de preço para entrarem em vigor em data futura |
+| **Grupos de Impostos** | Classificação fiscal dos produtos — ver [Grupo de Imposto](grupo-de-imposto.md) |
+| **Grupos de Acompanhamento** | Adicionais, opções e variações de produtos |
+| **Grupo de Preço Diferenciado** | Tabelas de preço especiais por grupo de clientes |
+| **Gerenciador de Pizzas** | Tamanhos e quantidade de sabores das pizzas |

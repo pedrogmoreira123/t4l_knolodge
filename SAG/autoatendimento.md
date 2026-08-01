@@ -14,6 +14,24 @@ Guia completo dos sistemas de auto-atendimento do SAG: totem de pedidos, auto-se
 
 > **Configuração:** Todas as modalidades são configuradas pela equipe técnica T4L antes do uso. O cliente operador não acessa essas configurações.
 
+### Onde cada modalidade é ligada
+
+| Onde | O que define |
+|---|---|
+| **Config. Terminal → Caixa → Tipo Caixa** | Transforma o terminal em totem. Opções: **Normal**, **Auto Atendimento Comanda**, **Auto Atendimento Pedido**, **Auto Atendimento Pedido com Comanda**, **Auto Atendimento Mercado** |
+| **Config. Terminal → Auto Atendimento** | Instrução da tela inicial (máx. 100 caracteres), Modo de leitura inicial (Comanda e Produto / Somente Comanda / Somente Produto) e Tipo de Comanda (Impressa / Física) |
+| **Config. Global → Autoatendimento** | Liga o **Utiliza Autoatendimento** e define cardápio, espécies aceitas e visual (ver abaixo) |
+| **Aba Principal → Auto Serviço** | Tela de auto-serviço com balança (requer a permissão **Outros → Auto Serviço**) |
+
+### Config. Global → Autoatendimento
+
+| Seção | Opções |
+|---|---|
+| **Pedido** | Origem do pedido e Tipo (Ambos / Viagem / Agora) |
+| **Espécies** | Quais formas de pagamento o totem aceita: DINHEIRO, DÉBITO, CRÉDITO, Pix, VOUCHER |
+| **Configurações** | Subgrupos (Não Utiliza / Menu Completo); Mostra Acompanhamentos Com Fotos ou Sem Fotos; Pizza n Sabores (Todos Sabores / Grupo / Sub Grupo); Solicitar Nome; Gerar pedido ao efetuar venda; Observação Pedido; Observação Item; Utiliza Fidelidade |
+| **Estilo** | Tela Inicial, Logo Cardápio, Cores Primária/Secundária/Terciária, Fontes sobre cada cor, Nº Colunas de itens, Tamanho da imagem (Pequeno a Gigante) |
+
 ---
 
 ## 1. Totem de Pedidos
@@ -82,6 +100,10 @@ Antes de pagar, o cliente informa o nome para identificação do pedido. Um tecl
 ## 2. Auto-Serviço com Balança
 
 Sistema para estabelecimentos que vendem produtos a peso: padarias, açougues, rotisseries.
+
+**Caminho:** Aba **Principal** > **Auto Serviço** (requer a permissão **Outros → Auto Serviço**)
+
+A tela mostra em letras grandes **"COLOQUE O PRATO NA BALANÇA"** enquanto está ociosa, e passa a exibir Preço, Quantidade e Total quando há peso na balança.
 
 ### Como funciona
 

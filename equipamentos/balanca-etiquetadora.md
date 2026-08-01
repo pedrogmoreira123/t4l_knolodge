@@ -15,7 +15,9 @@ A comunicação entre o SAG e a balança é feita via **MGV** (aplicativo extern
 - Código de barras
 - Preço
 
-**Caminho no SAG:** Outros → **Arqs. de Balança**
+**Caminho no SAG:** Outros → **Arqs. da Balança** (requer a permissão **Outros → Arquivos da Balança**)
+
+Na tela, escolha a marca (**Toledo** ou **Filizola**) e marque quais arquivos gerar, no grupo **Gerar arquivos de itens**.
 
 ---
 
@@ -24,16 +26,18 @@ A comunicação entre o SAG e a balança é feita via **MGV** (aplicativo extern
 ### Toledo
 Três arquivos de exportação disponíveis:
 
-| Arquivo | Conteúdo |
+| Opção na tela | Conteúdo |
 |---|---|
-| `itensmgv` | Arquivo principal de itens para o MGV |
-| `txitens` | Arquivo de itens em formato texto |
-| `txinfo` | Arquivo com a observação do produto |
+| **ITENSMGV** | Arquivo principal de itens para o MGV |
+| **TXITENS** | Arquivo de itens em formato texto |
+| **TXINFO - obs do produto** | Arquivo com a observação do produto |
 
 ### Filizola
-| Arquivo | Conteúdo |
+| Opção na tela | Conteúdo |
 |---|---|
-| `cadtxt` | Arquivo de cadastro de produtos |
+| **CADTXT** | Arquivo de cadastro de produtos |
+
+> Não confundir com a **balança de peso** ligada ao caixa (Toledo, Urano US Pop, Magellan), configurada em **Config. Terminal → Balança**. A etiquetadora é outro equipamento e usa este fluxo de arquivo + MGV.
 
 ---
 

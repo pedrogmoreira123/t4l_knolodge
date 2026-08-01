@@ -108,25 +108,29 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 
 | Aba | Função |
 |---|---|
-| **Dashboard** | Resultados do faturamento diário, semanal e mensal (vendas, ticket médio, faturamento, pedidos, itens cancelados, gráfico de faturamento por dia) |
-| **IA** | Módulo de inteligência artificial integrado (20 perguntas grátis, depois pago — opção de pagamento aparece em tela com permissão de usuário) |
-| **Principal** | Tela principal com atalhos: Caixa, Terminal de Comandas, Caderneta, Comandas, Novo Pedido, Tela de Pedidos (KDS) |
-| **Cadastros** | Produtos, Clientes, Grupos, Funcionários, Cupom Desconto, Entregadores, Programa de Fidelidade, Transportadoras, Fornecedores, Promoção, etc. |
+| **Dashboard** | KPIs do negócio: cartões configuráveis da seção "Hoje", comparativo dos últimos 30 dias vs período anterior (faturamento, vendas, ticket médio, comandas, pedidos, sangrias, cancelados, horário de pico), gráfico de faturamento comparativo, top produtos, pedidos por origem e mapa de calor. Botões **Configurar** e **Atualizar** |
+| **IA** | Módulo de inteligência artificial integrado. Sem o módulo contratado: 20 perguntas grátis. Com o módulo: 100 perguntas. A tela mostra "Perguntas gratuitas restantes: X de Y" e, ao esgotar, exibe a opção de contratação. Depende da permissão Outros → Módulo IA |
+| **Principal** | Caixa, Terminal de Comandas, Caderneta, Comandas, Novo Pedido, KDS - Tela de Pedidos, Alertas Garçom, Auto Serviço |
+| **Cadastros** | Produtos, Clientes, Grupos, Funcionários, Cupom Desconto, Entregadores, Programa de Fidelidade, Transportadoras, Fornecedores, Alteração de Preço Programada, Grupos de Impostos, Grupos de Acompanhamento, Grupo de Preço Diferenciado, Promoção, Gerenciador de Pizzas |
 | **Produções** | Receitas, Nova Produção, Consultar Produção, Embalagens, Relatórios |
-| **Estoque** | Entrada de Nota, Estoque Atual, Ajustes, Inventário, Pedido de Compra, Transferências, etc. |
-| **Financeiro** | Contas a Pagar/Receber, Contas Bancárias, Conciliação, Extratos, Relatórios, Central de Faturas |
-| **Delivery** | Novo Pedido (mesma tela do Principal), Consulta de Pedidos, Relatórios específicos |
-| **Romaneio** | Módulo para fábricas — NF-e, boletos, faturas (estrutura similar ao delivery) |
-| **NFe** | Emitir, Gerenciar, Configuração, Inutilizar, NFe Recebidas, Vendas, Exportar |
-| **Relatórios** | Fechamento de Caixa, Faturamento, Consultas, Itens Cancelados, Vendas, Caderneta, Comissões, etc. |
-| **Outros** | Central de Usuários, Ferramentas, Grupo de Permissões, Certificado Digital, Licença, TEF, Impressoras Remotas, Etiquetas, Ferramentas CFe, Conf. Dispositivos Móveis, etc. |
+| **Estoque** | Entrada de Nota, Relatórios, Locais de Estoque, Estoque atual, Consulta de Notas, Saída de Produtos, Ajuste de Estoque, Transferência de Estoque, Inventário, Pedido de Compra, Cotação, Produtos Fornecedores, Transferência de Estoque Multiloja, CFOP Parametrização, Análise de Preços |
+| **Financeiro** | Contas a Pagar, Contas a Receber, Contas Bancárias, Categorias, Conciliação Bancária, Transferência Bancária, Extratos, Relatórios, Ajuste de Conta, Espécies, Central de Faturas, Conciliação de Recebíveis |
+| **Delivery** | Novo Pedido, Pedidos - Listagem, Pedidos - Kanban, Relatórios, Origens, Integrações |
+| **Romaneio** | Módulo para fábricas — Novo Pedido, Romaneio - Lista, Romaneio - Kanban, Relatórios, Origens |
+| **NFe** | Emitir, Gerenciar, Configuração, Inutilizar, NFe Recebidas, Vendas, Pedidos, Perfil de Impostos, Exportar |
+| **Relatórios** | Personalizados, Fechamento de Caixa, Faturamento, Consultas, Itens Cancelados, Notas, Vendas, Listagem, Caderneta, Entradas e Saídas, Comandas Abertas, Venda por Usuário, Comissões, Lucros e MarkUp, Compras, Outros |
+| **Outros** | Central de Usuários, Ferramentas, Grupo de Permissões, Arqs. da Balança, Etiquetas, Impressoras Remotas, Dados Cadastrais, Certificado Digital, Licença, Config Espécies, Cartão de Acesso, Lei do Imposto, Ferramentas CFe, Exportar XML, TEF, Conf. Dispositivos Móveis, Configurações de Estabelecimentos, SPED |
 
 ### Canto Superior Direito
 | Item | Função |
 |---|---|
+| **Notificações** (sino) | Central de Notificações, com badge de não lidas |
 | **Suporte** | Acesso ao suporte T4L |
-| **Config. Terminal** | Configurações por terminal/caixa (impressoras, NFC-e, TEF, caixa, balança, personalizar, delivery, outros). Acesso restrito a técnicos. |
-| **Config. Global** | Configurações globais do sistema (email, caixa, delivery, romaneio, comandas, estoque, financeiro, etiquetadora, outros, módulos, autoatendimento, NFC-e). Acesso restrito a técnicos. |
+| **Config. Terminal** | Configurações por terminal/caixa. Abas: Impressoras, NFC-e, TEF, Terminal PC, Caixa, Balança, Biometria, Personalizar, Produtos, Delivery, Auto Atendimento, Outros |
+| **Config. Global** | Configurações globais. Abas: Email, Caixa, Delivery, Romaneio, Taxa de Entrega, Comandas, Estoque, Financeiro, Etiquetadora, Outros, Módulos, Autoatendimento, NFC-e, Multiloja |
+| **Nome do usuário** | Menu com Alterar Senha e Sair |
+
+> **Configurações Avançadas:** ambas as telas de configuração têm um checkbox **Configurações Avançadas** no canto superior direito, que **exige senha técnica**. Enquanto estiver desmarcado, as abas técnicas ficam ocultas — no Config. Terminal: Impressoras, NFC-e, TEF e Balança; no Config. Global: Email, Etiquetadora, Módulos, NFC-e e Multiloja. Se o cliente diz que "sumiu a aba de impressoras", é isso.
 
 ---
 
@@ -138,17 +142,19 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 | **Caderneta** | Gerenciamento de caderneta (Recebimento, Extrato, Compras, Pagamentos, Resumo, Canceladas) |
 | **Comandas** | Visualização e gestão das comandas (status, bloqueio, exclusão) |
 | **Novo Pedido** | Cadastrar pedido no delivery (mesma tela do módulo Delivery) |
-| **Tela de Pedidos** | KDS — painel de pedidos estilo fast food para cozinha |
+| **KDS - Tela de Pedidos** | Abre a lista das telas KDS configuradas — painel de pedidos estilo fast food para a cozinha |
+| **Alertas Garçom** | Painel de chamados feitos pelas mesas |
+| **Auto Serviço** | Tela de auto-serviço com balança (requer permissão Outros → Auto Serviço) |
 
 ---
 
 ### Atalhos da Frente de Caixa
 | Tecla | Função |
 |---|---|
-| F1 | Outras Funções (1-Abrir Gaveta, 2-Venda em Espera, 3-Comandas Abertas, 4-Caixa em Espera, 5-Devolução de Venda, 6-Devolução de Produto, 7-Central NFC-e, 8-Central de Ajustes TEF, 9-Bloqueia Tela Caixa) |
+| F1 | Tela **Todas as Funções** — painel com todos os comandos do caixa. Teclas numéricas: 1-Abrir Gaveta, 3-Comandas Abertas, 4-Caixa em Espera, 5-Devolução de Venda, 6-Devolução de Produto, 7-Central NFCe, 8-Central TEF, 9-Bloqueia Caixa. **Não existe a opção 2.** ESC fecha |
 | F2 / Enter | Iniciar Venda (sem CPF) |
-| F3 | Iniciar Venda (solicita CPF primeiro) |
-| F4 | Consulta de Comandas |
+| F3 | Iniciar Venda (solicita CPF em seguida) |
+| F4 | Consulta de Comandas — abre o Terminal de Comandas se "F4 Abre Terminal" estiver marcado no Config. Terminal |
 | F5 | Cancelar Item |
 | F6 | Cancelar Venda |
 | F7 | Pagamento de Caderneta (precisa de caixa aberto) |
@@ -163,6 +169,9 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 | Ctrl+U | Última Venda |
 | Ctrl+F | Inserir Comanda Parcial (um ou mais produtos das comandas) |
 | Ctrl+L | Extrato Programa de Fidelidade |
+| Ctrl+B | Liga/desliga o bloqueio do F2 |
+| Backspace / Delete | Cancela o item selecionado na lista |
+| ESC | Minimiza a tela do caixa |
 
 ### Atalhos da Tela de Formas de Pagamento
 | Tecla | Função |
@@ -172,23 +181,38 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 | F3 | Inserir Observação |
 | F4 | Inserir Voucher |
 | F5 | Inserir Cupom Desconto |
-| F6 | Cadastrar |
+| F6 | Cadastrar Cliente |
+| F7 | Resgatar Benefício (fidelidade) |
+| F8 | Alterar Taxa de Serviço |
+
+### Atalhos do Visualizador de Venda (Últimas Vendas)
+| Tecla | Função |
+|---|---|
+| F1 | Imprimir Cupom Fiscal |
+| F2 | Imprimir Cupom Fiscal (com CPF) |
+| F3 | Imprimir Cupom Simples |
+| F4 | Imprimir Comprovante Caderneta |
+| F6 | Cancelar Venda |
+| F7 | Trocar Formas de Pagamento |
 
 ### Atalhos do Terminal de Comandas
 | Tecla | Função |
 |---|---|
-| F1 | Cancela Item |
+| F1 | Cancela Item (pergunta o número do item) |
 | F2 | Pesquisar Produtos |
 | F3 | Comandas Abertas |
 | F4 | Limpar Comanda |
-| F7 | Imprimir Prévia |
+| F7 | Imprimir Prévia (pergunta o número de pessoas) |
 | F8 | Transferir Comanda |
 | F9 | Finalizar no Caixa |
+| F10 | Inserir Pizza |
 | F11 | Transferir Itens |
-| F12 | Finalizar Terminal |
+| F12 / ESC | Finalizar Terminal |
 | Ctrl+D | Desconto no Item |
 | Ctrl+- | Desconto na Comanda |
-| Back | Cancela Item Selecionado |
+| Ctrl+E | Central de Mesas |
+| Ctrl+F | Trocar Mesas |
+| Backspace | Cancela Item Selecionado |
 
 ### Atalhos da Tela de Comandas (Gestão)
 | Tecla | Função |
@@ -260,8 +284,10 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 - **Pizza (produto-pizza):** quando o produto tem a opção **Pizza** habilitada (aba **Pizza** do cadastro), o preço **NÃO** é alterado na aba Geral / Preço de Venda — é definido na aba **Pizza**, no **Valor de cada tamanho**. O módulo **Gerenciador de Pizza** (lista todos os produtos com Pizza habilitada e gerencia a quantidade de pedaços/sabores por tamanho) é habilitado **exclusivamente pela equipe técnica**.
 - **Clientes:** Cadastros > Clientes | campos: Nome, CPF/CNPJ, Telefone
 - **Usuários:** Outros > Central de Usuários > Novo > Login + Senha + Grupo de Permissão > Salvar
-- **Grupos de permissão:** Outros > Grupo de Permissões > selecionar grupo > Permissões
+- **Grupos de permissão:** Outros > Grupo de Permissões > selecionar grupo > 14 abas de setor (Caixa, Comandas, Caderneta, Terminal, Cadastros, Consultas, Alterações, Relatórios, Delivery/Romaneio, Estoque, NF-e, Financeiro, Recebimento, Outros)
+- **Permissão alterada não vale na hora:** as permissões são carregadas **no login**. Depois de alterar um grupo, o operador precisa **sair e entrar de novo**. Nunca diga que a mudança se aplica imediatamente.
 - **Alterar senha (próprio usuário):** menu superior > Alterar Senha
+- **Estabelecimentos/filiais:** Outros > Configurações de Estabelecimentos (não fica em Cadastros)
 
 ### Configurações — Impressoras
 - Cadastro de impressoras, regras de impressão, número de vias e definição de qual impressora atende cada seção (caixa, cozinha, pedidos) são configurações de **acesso exclusivo da equipe técnica** (Config. Terminal).
@@ -272,38 +298,54 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 - **Acessar NFC-e:** Aba NFe na barra superior (configuração da NFC-e é feita pela equipe técnica T4L)
 - **Central NFC-e:** No caixa, F1 > opção 7
 - **Validar licença:** Menu NFC-e > botão Validar Online
-- **Configurar CST/CFOP do produto:** Cadastros > Produtos > aba Impostos NFE/NFCE
-- **Gerar XMLs para contabilidade:** Outros > Ferramentas CFe > Arquivos XML > definir período > Compactar em arquivo único > Enviar por e-mail > Gerar
+- **Configurar CST/CFOP do produto:** Cadastros > Produtos > aba **Impostos** > Grupo de Imposto > **Editar** (o CST e o CFOP ficam dentro do grupo, não no produto)
+- **Gerar XMLs para contabilidade:** Outros > **Exportar XML** > Início/Término > marcar NFCe / NFE - Emitidas / NFE - Recebidas > marcar Incluir Canceladas, Incluir Relatório, Incluir Inutilizadas, Incluir DANFE conforme o pedido > escolher pasta de destino **ou** marcar "Enviar arquivos por email" e informar o e-mail > **gerar**. Em SP existe ainda a opção "Buscar Online Cupons Faltantes (SAE SP)"
+- **NUNCA** oriente "Ferramentas CFe > Arquivos XML" para gerar XML de NFC-e/NF-e — Ferramentas CFe é do SAT/CF-e, que foi descontinuado
 - **Aplicar certificado digital (A1):** em qualquer computador com SAG — Outros > Certificado Digital > A1 > selecionar arquivo .pfx > inserir senha > Salvar > fechar e reabrir o SAG. O próprio cliente consegue; transferir para suporte só se houver muita dificuldade.
 - **Tela de certificado configurado:** ao acessar Outros > Certificado Digital quando já há um certificado, a tela exibe a validade e o tipo, com dois botões: **Trocar Certificado** (aplica um .pfx já em mãos) e **Adquirir Novo Certificado** (abre o site da CertBr para comprar/renovar). Sempre oriente o cliente a usar esse botão para renovar — não encaminhe para a contabilidade.
 
 ### Relatórios
-- **Vendas:** Relatórios > Vendas (Geral, Por Caixa, Por Produto, Por Forma de Pagamento)
+- **Vendas:** Relatórios > Vendas (Estatísticas, Curva ABC de Itens/Grupos, CMV por Produto, Produtos Mais Vendidos, Vendas por Produto/Caixa/Grupo/Espécie/Turno/Semana/Cliente, Pesquisa de Vendas, Exportar Dados, Taxa de Serviço, entre outros)
+- **Faturamento:** Relatórios > Faturamento (Geral, Por Dia/Hora, Por Espécies, Por Turno, Por Tipo, Por Usuário, Por Caixa, Por Tipo de Pedido, Comparativo, Consolidado, Projetado, Multiloja - Comparativo, Multiloja - Por Loja)
 - **Cancelamentos:** Relatórios > Itens Cancelados
-- **Fechamento de caixa:** Relatórios > Fechamento de Caixa
-- **Caderneta:** Relatórios > Caderneta
-- **Consulta cupom a cupom:** F10 ou Relatórios > Consultas
+- **Fechamento de caixa:** Relatórios > Fechamento de Caixa (Por Dia, Por Período, Caixas Detalhados, Divergências)
+- **Notas/cupons emitidos:** Relatórios > Notas (Geral, Impostos, Produtos, Inutilizadas, Canceladas, Recebidas, CFOP, Contingência)
+- **Consultas:** Relatórios > Consultas (Vendas, Sangrias, Vendas na Caderneta, Pagamentos na Caderneta, Voucher)
+- **Caderneta:** Relatórios > Caderneta (abre a Central de Caderneta)
+- **Sangrias:** Relatórios > Entradas e Saídas
+- **Compras:** Relatórios > Compras (Curva ABC de Produto)
+- **Relatórios de Estoque:** aba **Estoque** > Relatórios. **Financeiro:** aba Financeiro > Relatórios. **Produções:** aba Produções > Relatórios. **Delivery/Romaneio:** aba Delivery > Relatórios
+- **Consulta cupom a cupom:** F10 (últimas vendas no caixa) ou Relatórios > Consultas > Vendas
 
-> **ATENÇÃO:** Os relatórios do SAG são fixos. O cliente **não consegue** alterar ordenação, colunas, layout ou qualquer parâmetro de exibição. Se o cliente pedir para mudar a forma como um relatório é exibido (ordenar por valor, agrupar diferente, etc.) → ESCALAR_SUPORTE. Não sugira cliques em cabeçalhos de coluna ou qualquer outra interação de personalização.
+> **ATENÇÃO:** Os relatórios padrão do SAG são fixos. O cliente **não consegue** alterar ordenação, colunas ou layout deles. A alternativa oficial é **Relatórios > Personalizados**, onde o cliente monta um relatório próprio escolhendo fontes de dados, colunas, vínculos e filtros. Se o pedido for personalizar um relatório padrão → ESCALAR_SUPORTE ou oriente a criar um personalizado.
 
 ### Delivery / Pedidos
 - **Novo pedido:** Tela Principal > Novo Pedido ou Delivery > Novo Pedido (mesma tela)
-- **Consulta de pedidos:** Delivery > Consulta de Pedidos (filtros: data, status, tipo, pagamento, origem, ent/ret, cliente, telefone, código)
-- **Relatórios delivery:** Delivery > Relatórios (Produção, Pedidos Resumidos, Por Origem, Completos, Por Entregador, Por Usuário, etc.)
+- **Consulta de pedidos:** Delivery > **Pedidos - Listagem** (filtros: data, status, tipo, pagamento, origem, ent/ret, cliente, telefone, código). O mapa de calor/pedidos é aberto de dentro dessa tela
+- **Kanban:** Delivery > **Pedidos - Kanban** (arrastar o cartão muda o status)
+- **Origens:** Delivery > Origens | **Vínculo de produtos das plataformas:** Delivery > Integrações
+- **Entregadores:** Cadastros > Entregadores (não fica na aba Delivery)
+- **Relatórios delivery:** Delivery > Relatórios (Produção, Pedidos Resumidos, Por Origem, Completos, Por Entregador, Por Usuário, Consulta de Vendas, Produtos por Pedido, Resumo, Histórico, Taxas por Origem, **Tempo por Status**, Exportar Dados, Pedidos Alterados)
 - **BoltDelivery:** plataforma de delivery web própria da T4L (boltdelivery.com.br). O cliente final acessa o cardápio online, faz o pedido e ele chega ao SAG como qualquer pedido de delivery. Problemas com BoltDelivery → ESCALAR_SUPORTE.
-- **Integrações de delivery:** o SAG integra com **iFood, 99food, Keeta, OpenDelivery, BeDelivery, Loocal e Uber Direct**. **NUNCA afirme que a única integração disponível é o iFood** — isso é incorreto. São serviços Windows que rodam no servidor e se comunicam com a API das plataformas. O cliente **não tem acesso, não consegue visualizar e não sabe se está configurado** — não existe nenhuma tela, menu ou configuração acessível ao cliente para isso. Qualquer problema com integração de delivery → ESCALAR_SUPORTE imediatamente, sem fazer perguntas sobre configuração ao cliente.
+- **Integrações de delivery:** o SAG integra com muitas plataformas. Para **cardápio/recebimento de pedidos**: iFood, Rappi, Uber Eats, Open Delivery (genérico, Keeta, 99Food, ENVIO), Delivery Direto, BeDelivery, AnotaAi, OiMenu, CINNDI, 88Digital, WABIZ e Epadoca (Preço). Para **logística de entrega** (chamar entregador): iFood Delivery, 99 Food, Uber Direct, Loocal e Open Delivery. **NUNCA afirme que a única integração disponível é o iFood** — isso é incorreto. São serviços Windows que rodam no servidor e se comunicam com a API das plataformas. O cliente **não tem acesso, não consegue visualizar e não sabe se está configurado** — não existe nenhuma tela, menu ou configuração acessível ao cliente para isso. Qualquer problema com integração de delivery → ESCALAR_SUPORTE imediatamente, sem fazer perguntas sobre configuração ao cliente.
 
 ### Estoque
 - **Entrada de estoque:** Estoque > Entrada de Nota > dados da nota + itens > Salvar
 - **Ajuste de estoque:** Estoque > Ajuste de Estoque > produto + nova quantidade + motivo
+- **Saída avulsa:** Estoque > **Saída de Produtos** > Nova Saída de Produto
 - **Pedido de compra:** Estoque > Pedido de Compra > fornecedor + produtos > Salvar
-- **Estoque atual:** Estoque > Estoque Atual
+- **Estoque atual:** Estoque > **Estoque atual**
+- **Inventário:** Estoque > **Inventário** (Salvar e Sair guarda o progresso; Salvar e Processar aplica e não pode ser desfeito)
+- **Cotação:** Estoque > **Cotação** | **Análise de preços:** Estoque > **Análise de Preços**
+- **Transferência entre filiais:** Estoque > **Transferência de Estoque Multiloja** (a "Transferência de Estoque" comum é só entre locais da mesma loja)
 
 ### Financeiro
-- **Contas a pagar:** Financeiro > Contas a Pagar
-- **Contas a receber:** Financeiro > Contas a Receber
-- **Extrato:** Financeiro > Extratos > selecionar conta e período
-- **Conciliação:** Financeiro > Conciliação Bancária
+- **Contas a pagar / receber:** Financeiro > Contas a Pagar / Contas a Receber — essas telas servem para **lançar**. Para consultar/localizar lançamentos, use o **Extratos**
+- **Extrato:** Financeiro > **Extratos** > selecionar conta e período. É também de onde se efetivam contas (botão **Efetivar Vários**) — não existe card "Efetivar Contas"
+- **Conciliação bancária:** Financeiro > Conciliação Bancária | **Recebíveis de cartão:** Financeiro > **Conciliação de Recebíveis**
+- **Faturas/boletos:** Financeiro > **Central de Faturas**
+- **Espécies (formas de pagamento):** Outros > **Config Espécies** ou Financeiro > Espécies. A espécie **DESCONTO** precisa existir para o Ctrl+- funcionar no caixa
+- **Comissões:** Relatórios > **Comissões** (abre o Lançamento de Comissões) — não fica na aba Financeiro
 
 ### Produção e Comandas
 - **Terminal de Comandas:** Tela Principal > Terminal de Comandas (fluxo: Operador > Comanda > Produtos)
@@ -314,10 +356,16 @@ O SAG é um sistema Windows organizado em abas na barra de navegação superior:
 - **Nova Produção:** Produções > Nova Produção > pesquisar produto > selecionar receita > qtd a produzir > adicionar > salvar (dúvidas complexas: ESCALAR_SUPORTE)
 
 ### Módulo IA
-- Acesso: aba **IA** na barra superior (badge "NEW")
-- 20 perguntas gratuitas
-- Após 20 perguntas: módulo pago (opção de pagamento aparece em tela, necessário permissão de usuário)
+- Acesso: aba **IA** na barra superior (badge "NEW"), dependente da permissão **Outros → Módulo IA**
+- Cliente **sem** o módulo contratado: **20 perguntas** gratuitas. Cliente **com** o módulo: **100 perguntas**
+- A tela mostra "Perguntas gratuitas restantes: X de Y"; ao esgotar, exibe o painel com a opção de contratação
 - Funcionalidades: orientação sobre relatórios, geração de informações do banco de dados
+
+### Dashboard
+- Seção **Hoje**: cartões que o cliente escolhe em **Configurar** (Faturamento Hoje, Vendas Hoje, Ticket Médio Hoje, Pedidos Hoje, Pedidos/Itens Cancelados Hoje, Média de Itens por Venda, Hora de Pico, Faturamento Semana/Mês/7 dias/30 dias, Item Mais Vendido, Produto Mais Rentável, Hoje vs Ontem, Variação 30 dias etc.)
+- Seção **Comparativo — últimos 30 dias vs período anterior**: KPIs com tendência (Faturamento, Vendas, Ticket Médio, Comandas, Pedidos, Sangrias, Cancelados, Horário de Pico)
+- Painéis: Faturamento Comparativo, Top Produtos, Pedidos por Origem, Mapa de Calor
+- Botões **Configurar** (personalizar cartões) e **Atualizar**
 
 ---
 
@@ -335,9 +383,11 @@ Quando o cliente relatar uma destas mensagens, a causa já está identificada. C
 | "Comanda inexistente" (app) | API do app desatualizada vs. servidor | ESCALAR_SUPORTE — sem ação do cliente (caso 23) |
 | "Falha na conexão com o servidor" (fora do estabelecimento) | Porta 3306 / DDNS | ESCALAR_SUPORTE (caso 22) |
 | "Obrigatório adicionar um Grupo de Imposto" | Versão 25.10+ exige grupo de imposto | Cadastros > Produtos > aba Impostos > selecionar grupo > Alterar (caso 20) |
-| "Cupom de desconto indisponível para uso!" | Limite de usos atingido ou cupom não existe | Cadastros > Cupom de Desconto > checar ativo/usos (caso 27) |
+| "Cupom de desconto indisponível para uso!" | Limite de usos atingido ou cupom não existe | Cadastros > **Cupom Desconto** > checar ativo/usos (caso 27) |
 | "O total das faturas não pode ser diferente do total do pedido" (Romaneio) | Faturas desatualizadas vs. pedido | Tela do pedido > Gerar Faturas novamente (caso 25) |
-| Rejeição fiscal (ICMS ST, CST, CFOP) | Config. fiscal do produto | Cadastros > Produtos > aba Impostos > checar CST/CFOP; persistir → ESCALAR_SUPORTE (caso 24) |
+| Rejeição fiscal (ICMS ST, CST, CFOP) | Config. fiscal do produto | Cadastros > Produtos > aba Impostos > Grupo de Imposto > Editar > checar CST/CFOP; persistir → ESCALAR_SUPORTE (caso 24) |
+| "Sem permissão" para uma função | Permissão do grupo, ou grupo alterado sem relogar | Outros > Grupo de Permissões > liberar; o operador precisa **sair e entrar** para valer |
+| Aba de configuração "sumiu" (Impressoras, TEF, NFC-e, Balança, Módulos, Multiloja) | Checkbox **Configurações Avançadas** desmarcado | Marcar Configurações Avançadas (exige senha técnica) → ESCALAR_SUPORTE |
 
 ### 1. Impressora não imprime
 1. Verificar se está ligada (luz acesa)
@@ -379,7 +429,7 @@ Antes de orientar, perguntar: só esse computador ou todos estão com problema?
 2. Acesse aba NFe no menu principal
 3. Se aparecer botão Validar Online: clicar
 4. Fechar SAG e abrir novamente
-5. Se erro mencionar produto: Cadastros > Produtos > aba Impostos NFE/NFCE > corrigir CST e CFOP
+5. Se erro mencionar produto: Cadastros > Produtos > aba **Impostos** > Grupo de Imposto > **Editar** > corrigir CST e CFOP
 6. Se nunca funcionou: verificar com a contabilidade se as credenciais foram geradas
 
 ### 6. PIX / cartão não passa (TEF)
@@ -433,22 +483,25 @@ Se qualquer um dos três estiver com problema → resolver isso primeiro, depois
 3. Salvar e tentar novamente
 
 ### 14. Relatório com valores divergentes
-1. Relatórios > Consultas — filtrar pelo período exato
-2. Comparar com Relatórios > Fechamento de Caixa
-3. Para verificação fiscal: Outros > Ferramentas CFe > Arquivos XML
+1. Relatórios > **Consultas > Vendas** — filtrar pelo período exato
+2. Comparar com Relatórios > **Fechamento de Caixa** (aba Divergências para o fechamento em si)
+3. Cupom a cupom: Relatórios > **Notas > Geral**
+4. Detalhar por forma de pagamento: Relatórios > **Faturamento > Por Espécies**
+5. Para verificação fiscal (XMLs): Outros > **Exportar XML**
 
 ### 15. Enviar XML para a contabilidade
-1. Outros > Ferramentas CFe > Arquivos XML
-2. Definir período
-3. Marcar: Compactar em arquivo único
-4. Marcar: Enviar por e-mail > informar e-mail do contador
-5. Clicar em Gerar
+1. Outros > **Exportar XML**
+2. Definir **Início** e **Término**
+3. Marcar os tipos: **NFCe**, **NFE - Emitidas**, **NFE - Recebidas**
+4. Marcar conforme o pedido do contador: Incluir Canceladas, Incluir Relatório, Incluir Inutilizadas, Incluir DANFE
+5. Marcar **Enviar arquivos por email** e informar o e-mail do contador (ou escolher pasta de destino)
+6. Clicar em **gerar**
 
 ### 16. Cliente quer usar o módulo de IA
-1. Acessar aba **IA** na barra superior
-2. O módulo oferece 20 perguntas gratuitas
-3. Após as 20 perguntas, a opção de pagamento aparece em tela
-4. O usuário precisa ter permissão para efetuar o pagamento
+1. Acessar aba **IA** na barra superior (requer a permissão Outros → Módulo IA)
+2. Sem o módulo contratado, o cliente tem **20 perguntas** gratuitas; com o módulo contratado, **100**
+3. A tela mostra "Perguntas gratuitas restantes: X de Y"
+4. Ao esgotar, aparece o painel com a opção de contratação
 5. Para dúvidas sobre valores do plano pago → ESCALAR_COMERCIAL
 
 ### 17. Comanda não aparece / está bloqueada
@@ -456,6 +509,7 @@ Se qualquer um dos três estiver com problema → resolver isso primeiro, depois
 2. Verificar o status da comanda na lista
 3. Se bloqueada: selecionar e pressionar F4 (Desbloquear Comanda)
 4. Se precisar desbloquear várias: F9 (Desbloquear Comandas em lote)
+5. Se o cliente não tem o botão: checar as permissões da aba **Comandas** (Bloquear, Desbloquear, Limpar, Excluir) e lembrar que ele precisa relogar após a alteração
 
 ### 18. Como fazer pagamento parcial (misto)
 1. Na tela de Formas de Pagamento, digitar o código da primeira forma
@@ -499,8 +553,8 @@ Se qualquer um dos três estiver com problema → resolver isso primeiro, depois
 
 ### 27. "Cupom de desconto indisponível para uso!"
 - Causa: o cupom atingiu o limite de usos ou não existe no cadastro
-- Verificar: Cadastros > Cupom de Desconto > localizar o cupom > checar se está ativo e se ainda tem usos disponíveis
-- Se o cupom não existir: cadastrar um novo em Cadastros > Cupom de Desconto
+- Verificar: Cadastros > Cupom Desconto > localizar o cupom > checar se está ativo e se ainda tem usos disponíveis
+- Se o cupom não existir: cadastrar um novo em Cadastros > Cupom Desconto
 
 ### 24. Erro de rejeição fiscal na NFC-e ou NF-e (ICMS ST, CST, CFOP)
 - Antes de escalar: verificar o produto indicado no erro em Cadastros > Produtos > aba **Impostos** > checar CST e CFOP
@@ -539,7 +593,7 @@ Se qualquer um dos três estiver com problema → resolver isso primeiro, depois
 
 ### Balança Etiquetadora — Integração MGV ("dar carga na balança")
 - Contexto diferente do GBOT: a balança etiquetadora pesa e imprime etiquetas nos produtos (peso, preço, validade, código de barras)
-- O SAG gera arquivos de exportação em **Outros > Arqs. de Balança**; modelos suportados: **Toledo** (`itensmgv`, `txitens`, `txinfo`) e **Filizola** (`cadtxt`)
+- O SAG gera arquivos de exportação em **Outros > Arqs. da Balança**; modelos suportados: **Toledo** (ITENSMGV, TXITENS, TXINFO) e **Filizola** (CADTXT)
 - Esses arquivos são importados no **MGV** (aplicativo externo); após a importação, o operador **"dá carga na balança"** dentro do MGV para enviar os dados ao equipamento
 - O MGV é externo ao SAG — qualquer dúvida sobre o processo de importação ou configuração no MGV → ESCALAR_SUPORTE
 

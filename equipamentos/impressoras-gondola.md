@@ -20,11 +20,33 @@ Impressoras utilizadas para geração de etiquetas de gôndola (preço de pratel
 O SAG gera as etiquetas de gôndola em **PDF** para impressão. O fluxo é:
 
 1. Acesse **Outros → Etiquetas**
-2. Selecione os produtos desejados
-3. O sistema gera um arquivo PDF com as etiquetas formatadas
-4. Imprima o PDF na impressora de etiqueta configurada
+2. Filtre e selecione os produtos desejados
+3. Clique no botão de **imprimir etiquetas**
+4. O sistema gera um arquivo PDF com as etiquetas formatadas
+5. Imprima o PDF na impressora de etiqueta configurada
 
 > As etiquetas de gôndola são geradas como PDF — a impressão é feita pelo próprio Windows, assim como qualquer outro documento. Não é uma impressão direta via SAG como nos cupons fiscais.
+
+### Filtros e opções da tela
+
+| Opção | O que faz |
+|---|---|
+| **Recém Alterados** | Traz só produtos alterados em um período: Ontem, Hoje, Uma Semana, Quinze Dias ou Um mês — ideal para reetiquetar apenas o que mudou de preço |
+| **Ocultar Matéria Prima** | Remove insumos da lista |
+| **Converte Kg para 100g** | Imprime o preço por 100 g em vez de por quilo |
+| **Selecionar todos / Desselecionar todos** | Marca ou desmarca a lista inteira |
+
+A lista mostra Código, Descrição, Cod Barras, Preço, Grupo e SubGrupo.
+
+### Editor de modelo de etiqueta
+
+O botão de **configuração** (engrenagem) da tela de Etiquetas abre o **Editor de Etiqueta**, onde é possível:
+
+- Criar, duplicar e excluir **Modelos** de etiqueta
+- Definir **Largura (cm)** e **Altura (cm)** da etiqueta
+- Montar os **Campos da etiqueta**: tipo, posição X/Y em cm, largura, altura, fonte, negrito e texto fixo
+
+> Este editor fica dentro do SAG e pode ser usado pelo cliente. Ainda assim, para o primeiro ajuste de layout do rolo instalado, é mais rápido acionar o suporte T4L.
 
 ---
 
@@ -64,4 +86,7 @@ Qualquer dúvida ou dificuldade com a parte física da impressora (troca de ribb
 
 ## Configuração
 
-> A configuração de impressoras de etiqueta no SAG (tamanho, layout, vínculo com o módulo de etiquetas) é realizada pela equipe técnica T4L. Para qualquer ajuste, acionar o suporte.
+- **Layout da etiqueta** (tamanho e campos): pelo **Editor de Etiqueta**, dentro de Outros → Etiquetas → botão de configuração.
+- **Parâmetros da etiquetadora** no sistema: **Config. Global → Etiquetadora** — aba técnica, só aparece com **Configurações Avançadas** marcado (senha técnica).
+
+> Para o ajuste inicial ou qualquer dúvida de configuração, acionar o suporte T4L.

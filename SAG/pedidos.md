@@ -24,7 +24,7 @@ Guia completo dos módulos de Pedidos e Delivery do SAG: criar pedidos, acompanh
 
 ## 1. Novo Pedido
 
-**Pedidos → Novo Pedido**
+**Delivery → Novo Pedido**
 
 ### Seção: Cliente
 
@@ -74,7 +74,7 @@ Na lista de itens você pode editar, aplicar desconto ou cancelar um item já la
 
 ## 2. Consulta de Pedidos
 
-**Pedidos → Consulta de Pedidos**
+**Delivery → Pedidos - Listagem**
 
 Painel central de acompanhamento de todos os pedidos.
 
@@ -129,7 +129,7 @@ Painel central de acompanhamento de todos os pedidos.
 
 ## 3. Visão Kanban de Pedidos
 
-**Pedidos → Consulta Kanban**
+**Delivery → Pedidos - Kanban**
 
 Exibe os pedidos em colunas por status. Para mudar o status, **arraste o cartão** para a coluna desejada.
 
@@ -139,7 +139,7 @@ Colunas: **Em Andamento → Pronto → Em Entrega → Finalizado → Cancelado**
 
 ## 4. Últimos Pedidos do Cliente
 
-**Pedidos → Últimos Pedidos** *(ou F7 na tela de novo pedido)*
+**F7 na tela de Novo Pedido**
 
 1. Selecione o cliente e pressione **F7**.
 2. Defina o período desejado.
@@ -186,14 +186,14 @@ Para entregas via plataformas de logística (Loggi, iFood Delivery, Uber Direct,
 
 ## 7. Mapa de Endereços
 
-**Pedidos → Mapa**
+O mapa é aberto **de dentro da listagem de pedidos** (Delivery → Pedidos - Listagem), sobre os pedidos filtrados na tela — não existe um card "Mapa" no menu.
 
 | Modo | O que exibe |
 |---|---|
 | **Mapa de Calor** | Regiões com maior concentração de pedidos |
 | **Mapa de Pedidos** | Cada pedido como um ponto no mapa |
 
-Na Consulta de Pedidos, expanda a linha do pedido para ver endereço completo, **Copiar Endereço** e **Copiar Link de Rastreio**.
+Na listagem, expanda a linha do pedido para ver endereço completo, **Copiar Endereço** e **Copiar Link de Rastreio**.
 
 ---
 
@@ -201,7 +201,7 @@ Na Consulta de Pedidos, expanda a linha do pedido para ver endereço completo, *
 
 ### Cadastro de Entregadores
 
-**Pedidos → Entregadores → Cadastrar**
+**Cadastros → Entregadores → Novo Entregador**
 
 | Campo | O que preencher |
 |---|---|
@@ -215,7 +215,7 @@ Na Consulta de Pedidos, expanda a linha do pedido para ver endereço completo, *
 
 ### Consulta de Entregadores
 
-**Pedidos → Entregadores → Consultar**
+**Cadastros → Entregadores**
 
 - Marque **Apenas Ativos** para exibir somente entregadores disponíveis.
 - Dê **duplo clique** para abrir e editar o cadastro.
@@ -224,7 +224,7 @@ Na Consulta de Pedidos, expanda a linha do pedido para ver endereço completo, *
 
 ## 9. Origens de Pedido
 
-**Pedidos → Origens**
+**Delivery → Origens**
 
 As origens identificam de onde cada pedido veio (SAG, iFood, WhatsApp, telefone, balcão, etc.).
 
@@ -249,12 +249,17 @@ As origens identificam de onde cada pedido veio (SAG, iFood, WhatsApp, telefone,
 
 ### Plataformas disponíveis para logística de entregadores
 
+Configuradas em **Config. Global → Delivery → Integrações Logísticas**:
+
 | Plataforma | Tipo |
 |---|---|
-| **Loggi** | Solicitação + rastreamento em tempo real |
-| **iFood Delivery** | Solicitação via plataforma iFood |
+| **iFood** (iFood Delivery) | Solicitação de entregador via plataforma iFood |
 | **Uber Direct** | Entregador via Uber |
-| **BeDelivery / 99Food / Keeta / Loocal / OpenDelivery** | Plataformas regionais e abertas |
+| **99 Food** | Entregador via 99 |
+| **Loocal** | Plataforma regional |
+| **Open Delivery** | Protocolo aberto — atende diversas plataformas |
+
+> Plataformas de **cardápio/recebimento de pedidos** (iFood, Rappi, Uber Eats, Open Delivery/Keeta/99Food/ENVIO, Delivery Direto, bedelivery, AnotaAi, OiMenu, CINNDI, 88Digital, WABIZ) são outra coisa — configuradas no cadastro de integrações, não aqui.
 
 ---
 
@@ -263,6 +268,7 @@ As origens identificam de onde cada pedido veio (SAG, iFood, WhatsApp, telefone,
 | Status | Significado |
 |---|---|
 | **Não Confirmado** | Pedido recebido aguardando confirmação |
+| **Em Aberto** | Pedido registrado e ainda não confirmado/iniciado |
 | **Confirmado** | Confirmado, ainda não iniciado |
 | **Em Andamento** | Em produção / sendo preparado |
 | **Pronto** | Pronto para sair para entrega ou retirada |
@@ -298,7 +304,7 @@ As origens identificam de onde cada pedido veio (SAG, iFood, WhatsApp, telefone,
 
 ## 13. Relatórios de Pedidos
 
-**Pedidos → Relatórios**
+**Delivery → Relatórios**
 
 Os relatórios ficam organizados em abas. Cada aba tem seus próprios filtros e botão **Gerar Relatório**.
 
@@ -412,6 +418,12 @@ Exporta os pedidos do período em arquivo para uso em planilhas ou sistemas de B
 | **Pedidos Resumidos** | Um registro por pedido, sem detalhar itens |
 
 **Exportar Multiloja** — exporta dados de todas as filiais em um único arquivo.
+
+---
+
+### Tempo por Status
+
+Mostra quanto tempo os pedidos permaneceram em cada status no período. Serve para identificar onde a operação trava — por exemplo, pedidos parados muito tempo em "Pronto" antes de sair para entrega.
 
 ---
 

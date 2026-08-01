@@ -46,21 +46,23 @@ Passo a passo para as situações mais frequentes no atendimento.
 4. Se aparecer **Validar Online**: clicar
 5. Feche o SAG completamente e abra novamente
 6. Teste com uma venda
-7. Se erro mencionar produto específico: verificar **Cadastros > Produtos > aba Impostos > CST e CFOP**
+7. Se erro mencionar produto específico: verificar **Cadastros > Produtos > aba Impostos > Grupo de Imposto** (o CST e o CFOP ficam dentro do grupo — botão **Editar**)
 8. Se persistir: acessar remotamente via AnyDesk para diagnóstico
 
 ---
 
 ## PROC-04: Cliente Quer Enviar XML para a Contabilidade
 
-1. Acesse: **Outros > Ferramentas CFe > Arquivos XML**
-2. Defina o período (ex: mês anterior)
-3. Marque: **Gerar CF-e Cancelados** (se solicitado)
-4. Marque: **Compactar em arquivo único**
-5. Marque: **Enviar por e-mail**
-6. Informe o e-mail do destino
-7. Clique em **Gerar**
-8. Confirme que o e-mail foi recebido
+1. Acesse: **Outros > Exportar XML**
+2. Defina o período em **Início** e **Término** (ex: mês anterior)
+3. Marque os tipos de documento: **NFCe**, **NFE - Emitidas** e/ou **NFE - Recebidas**
+4. Marque, conforme o pedido do contador: **Incluir Canceladas**, **Incluir Relatório**, **Incluir Inutilizadas**, **Incluir DANFE**
+5. Marque: **Enviar arquivos por email** e informe o e-mail (e a **Cópia**, se houver)
+   - Alternativa: usar **Escolher pasta de destino → Selecionar...** para salvar no computador
+6. Clique em **gerar**
+7. Confirme que o e-mail foi recebido
+
+> **Não use "Ferramentas CFe"** — aquilo é do SAT/CF-e, que foi descontinuado. Para SP existe ainda a opção **Buscar Online Cupons Faltantes (SAE SP)**, útil quando faltam cupons no banco local.
 
 ---
 
@@ -75,6 +77,8 @@ Passo a passo para as situações mais frequentes no atendimento.
 5. Clique em **Salvar**
 6. Teste o login com o novo usuário
 
+> Ao alterar permissões de um grupo depois, o usuário precisa **sair e entrar de novo** — as permissões são lidas no login.
+
 ---
 
 ## PROC-06: Reconfigurar Regra de Impressão
@@ -82,7 +86,7 @@ Passo a passo para as situações mais frequentes no atendimento.
 > Regras de impressão são configuradas exclusivamente pela equipe técnica T4L via Config. Terminal. O cliente não acessa essas configurações.
 
 1. Acionar acesso remoto (AnyDesk) ao servidor do cliente
-2. No SAG: Config. Terminal > Impressoras
+2. No SAG: **Config. Terminal** > marcar **Configurações Avançadas** (exige senha técnica) > aba **Impressoras**
 3. Identificar o grupo/categoria com problema
 4. Selecionar a impressora correta no campo correspondente
 5. Ajustar o número de vias (normalmente 1)
@@ -153,15 +157,15 @@ Passo a passo para as situações mais frequentes no atendimento.
 
 ---
 
-## PROC-13: Aplicar Certificado Digital no SAG
+## PROC-12: Aplicar Certificado Digital no SAG
 
 > O próprio cliente consegue seguir este procedimento. Só acionar suporte se houver muita dificuldade.
 
 1. Ter em mãos o arquivo `.pfx` (fornecido pela certificadora ou contabilidade)
 2. Abrir o SAG em qualquer computador que tenha o sistema instalado
 3. Acessar **Outros > Certificado Digital**
-4. Selecionar tipo **A1**
-5. Clicar em buscar arquivo → selecionar o `.pfx`
+4. Selecionar tipo **A1 - Arquivo**
+5. Clicar em buscar arquivo → selecionar o `.pfx` (ou `.p12`)
 6. Inserir a **senha do certificado**
 7. Clicar em **Salvar**
 8. Fechar e reabrir o SAG
@@ -174,7 +178,7 @@ Passo a passo para as situações mais frequentes no atendimento.
 
 ---
 
-## PROC-14: Renovar ou Adquirir Novo Certificado Digital
+## PROC-13: Renovar ou Adquirir Novo Certificado Digital
 
 > Use este procedimento quando o cliente precisa **renovar** um certificado vencido/prestes a vencer, ou **adquirir** o primeiro certificado. O SAG tem um botão direto que encaminha para o site da autoridade certificadora parceira (CertBr).
 
@@ -193,7 +197,7 @@ Passo a passo para as situações mais frequentes no atendimento.
 
 ### Passo 3 — Aplicar o certificado recebido
 
-6. Após receber o arquivo `.pfx`, seguir o **PROC-13** para aplicar no SAG
+6. Após receber o arquivo `.pfx`, seguir o **PROC-12** para aplicar no SAG
 
 **Observações:**
 - O botão "Trocar Certificado" faz o mesmo que aplicar um `.pfx` já em mãos (substitui o atual)
@@ -201,12 +205,13 @@ Passo a passo para as situações mais frequentes no atendimento.
 
 ---
 
-## PROC-12: Cliente com Divergência no Relatório de Caixa
+## PROC-14: Cliente com Divergência no Relatório de Caixa
 
 1. Pergunte o período com divergência
-2. Acesse: **Relatórios > Consultas** — filtre pelo período exato
-3. Compare com o relatório de **Cupons Emitidos**
+2. Acesse: **Relatórios > Consultas > Vendas** — filtre pelo período exato
+3. Compare com **Relatórios > Notas > Geral** (cupons/notas emitidas)
 4. Verifique se há cancelamentos não computados
-5. Gere o relatório por **Forma de Pagamento** para detalhar
-6. Compare com extrato bancário se for divergência de cartão/PIX
-7. Se houver cancelamento indevido: verifique relatório de **Itens Cancelados** com responsável
+5. Detalhe por forma de pagamento em **Relatórios > Faturamento > Por Espécies**
+6. Compare com extrato bancário se for divergência de cartão/PIX (**Financeiro > Conciliação de Recebíveis**)
+7. Se houver cancelamento indevido: verifique **Relatórios > Itens Cancelados** (traz o usuário responsável)
+8. Para divergência do fechamento em si: **Relatórios > Fechamento de Caixa > Divergências**

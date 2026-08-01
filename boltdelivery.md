@@ -18,7 +18,7 @@ Site: https://boltdelivery.com.br/
 
 ## Integração com o SAG
 
-Os pedidos realizados pelo BoltDelivery chegam ao SAG como qualquer outro pedido de delivery — aparecem na **Consulta de Pedidos** e no **Kanban de Pedidos** com a origem identificada como BoltDelivery.
+Os pedidos realizados pelo BoltDelivery chegam ao SAG como qualquer outro pedido de delivery — aparecem em **Delivery → Pedidos - Listagem** e em **Delivery → Pedidos - Kanban** com a origem identificada como BoltDelivery.
 
 > Qualquer problema na integração entre BoltDelivery e SAG → **ESCALAR_SUPORTE**.
 

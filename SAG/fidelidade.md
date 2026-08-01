@@ -158,7 +158,9 @@ Para o tipo **Cashback**, o cliente pode escolher **quanto do saldo quer usar** 
 
 ## 8. Consultar o Extrato de um Cliente
 
-**Caminho:** Consultas → **Extratos de Fidelidade**
+**Caminhos:**
+- **Cadastros → Programa de Fidelidade** → abrir o programa → botão de **Extratos**
+- Na **Frente de Caixa**, pelo atalho **Ctrl + L** (ou F1 → **Extrato Fidelidade**)
 
 | Filtro | O que faz |
 |---|---|

@@ -11,18 +11,19 @@ Guia completo do sistema de permissões do SAG. Aqui você aprende a criar grupo
 3. [Associar um usuário a um grupo](#3-associar-um-usuário-a-um-grupo)
 4. [Permissões por setor](#4-permissões-por-setor)
    - [Caixa](#41-caixa)
-   - [Terminal](#42-terminal)
-   - [Comandas](#43-comandas)
-   - [Caderneta](#44-caderneta)
+   - [Comandas](#42-comandas)
+   - [Caderneta](#43-caderneta)
+   - [Terminal](#44-terminal)
    - [Cadastros](#45-cadastros)
    - [Consultas](#46-consultas)
    - [Alterações](#47-alterações)
-   - [Pedidos](#48-pedidos)
-   - [Estoque](#49-estoque)
-   - [NF-e](#410-nf-e)
-   - [Financeiro](#411-financeiro)
-   - [Relatórios](#412-relatórios)
-   - [Outros](#413-outros)
+   - [Relatórios](#48-relatórios)
+   - [Delivery/Romaneio](#49-deliveryromaneio)
+   - [Estoque](#410-estoque)
+   - [NF-e](#411-nf-e)
+   - [Financeiro](#412-financeiro)
+   - [Recebimento](#413-recebimento)
+   - [Outros](#414-outros)
 5. [Exemplos de perfis sugeridos](#5-exemplos-de-perfis-sugeridos)
 
 ---
@@ -41,18 +42,18 @@ O SAG controla o que cada operador pode ou não fazer através de **grupos de pe
 ### Regras importantes
 
 - Um operador **herda todas as permissões do grupo** ao qual está vinculado.
-- Alterar as permissões de um grupo **aplica as mudanças imediatamente** para todos os usuários daquele grupo — sem necessidade de relogar.
-- O **Grupo Admin** é reservado para administradores e não pode ser editado nem recriado com esse nome.
+- As permissões são carregadas **no momento do login**. Ao alterar as permissões de um grupo, os usuários que já estão logados **precisam sair e entrar novamente** para que a mudança valha. Não basta fechar e reabrir a tela.
+- O **Grupo Admin** é reservado para administradores, não aparece na lista de grupos e não pode ser editado.
 - Cada usuário pode pertencer a apenas um grupo.
 
 ---
 
 ## 2. Criar um Grupo de Permissão
 
-**Outros → Grupos de Permissão → Novo**
+**Outros → Grupo de Permissões → Novo**
 
 1. Informe um **nome** para o grupo (ex: "Operador de Caixa", "Atendente Delivery", "Gerente").
-2. Percorra as **13 abas de setores** e ative as permissões desejadas marcando os checkboxes.
+2. Percorra as **14 abas de setores** e ative as permissões desejadas marcando os checkboxes.
 3. Para permissões com valor numérico (como percentual máximo de desconto), informe o valor no campo correspondente.
 4. Use os botões **Selecionar Todos** e **Desselecionar Todos** dentro de cada aba para agilizar a configuração.
 5. Clique em **Salvar**.
@@ -61,7 +62,7 @@ O SAG controla o que cada operador pode ou não fazer através de **grupos de pe
 
 ## 3. Associar um usuário a um grupo
 
-**Outros → Usuários → Cadastrar ou Editar usuário**
+**Outros → Central de Usuários → Cadastrar ou Editar usuário**
 
 No cadastro do usuário, selecione o grupo desejado no campo **Grupo**. Ao salvar, o usuário passa a ter exatamente as permissões definidas naquele grupo.
 
@@ -69,7 +70,9 @@ No cadastro do usuário, selecione o grupo desejado no campo **Grupo**. Ao salva
 
 ## 4. Permissões por Setor
 
-As permissões estão organizadas em 13 setores. A seguir, o detalhamento completo de cada uma.
+As permissões estão organizadas em **14 setores**, exibidos nesta ordem: Caixa, Comandas, Caderneta, Terminal, Cadastros, Consultas, Alterações, Relatórios, Delivery/Romaneio, Estoque, NF-e, Financeiro, Recebimento e Outros.
+
+A seguir, o detalhamento completo de cada uma.
 
 ---
 
@@ -84,11 +87,9 @@ Controla as operações realizadas na **Frente de Caixa**.
 | **Cancelar Item** | Permite remover um produto já lançado em uma venda em andamento. |
 | **Cancelar Venda** | Permite cancelar uma venda inteira antes de finalizá-la. |
 | **Cancelar Sangria** | Permite desfazer uma sangria (retirada de dinheiro) já registrada. |
-| **Conceder Desconto** | Permite aplicar desconto em vendas. Ao ativar, informe também o **percentual máximo** permitido (ex: 10%). O sistema bloqueia descontos acima desse valor. |
-| **Percentual máximo de desconto** | Define o limite máximo de desconto que o operador pode conceder. Só aparece quando "Conceder Desconto" está ativo. |
+| **Conceder Desconto** | Permite aplicar desconto em vendas. Ao ativar, informe também o percentual máximo no campo **Max (%)** (padrão 10). O sistema bloqueia descontos acima desse valor. |
+| **Max (%)** | Define o limite máximo de desconto que o operador pode conceder. Só tem efeito quando "Conceder Desconto" está ativo. |
 | **Finalizar Caixa** | Permite realizar o fechamento do caixa ao final do turno. |
-| **Fechamento de Caixa — Lançar Valores** | Permite informar os valores em dinheiro durante o fechamento do caixa. Ao ativar, informe em quantos **dias anteriores** o operador pode alterar fechamentos já realizados. |
-| **Dias para alterar fechamento** | Define quantos dias retroativos o operador pode lançar ou corrigir valores de fechamento. Só aparece quando "Lançar Valores" está ativo. |
 | **Lançar Sangria** | Permite registrar retiradas de dinheiro do caixa (sangria). |
 | **Quantidade acima de 99** | Permite lançar um produto com quantidade superior a 99 unidades em uma única venda. |
 | **Venda com Estoque Negativo** | Permite finalizar uma venda mesmo que o produto não tenha estoque suficiente registrado. |
@@ -99,24 +100,11 @@ Controla as operações realizadas na **Frente de Caixa**.
 | **Editar Taxa de Serviço** | Permite modificar o valor da taxa de serviço cobrada em uma venda (ex: taxa de garçom). |
 | **Visualizar Últimas Vendas** | Permite consultar o histórico das vendas recentes realizadas no caixa. |
 
----
-
-### 4.2 Terminal
-
-Controla as operações realizadas no **Terminal** (PDV de mesas e comandas).
-
-| Permissão | O que libera |
-|---|---|
-| **Utiliza Terminal** | Permite o acesso ao terminal de lançamento. Sem esta permissão, o terminal não abre. |
-| **Cancelar Item** | Permite cancelar um produto já lançado em uma comanda aberta no terminal. |
-| **Conceder Desconto** | Permite aplicar desconto em pedidos do terminal. Ao ativar, informe o **percentual máximo** permitido. |
-| **Percentual máximo de desconto** | Limite máximo de desconto que o operador pode conceder no terminal. |
-| **Lançar Item Após Prévia** | Permite adicionar novos itens a uma comanda depois que a prévia já foi impressa. |
-| **Transferência de Comanda** | Permite mover itens ou transferir uma comanda inteira para outra mesa ou comanda. |
+> As permissões **Fechamento de Caixa - Lançar Valores** e **Alterar Fechamento Dias** — apesar de afetarem o fechamento do caixa — ficam na aba **Relatórios**, não na aba Caixa.
 
 ---
 
-### 4.3 Comandas
+### 4.2 Comandas
 
 Controla o gerenciamento de **comandas e mesas**.
 
@@ -131,7 +119,7 @@ Controla o gerenciamento de **comandas e mesas**.
 
 ---
 
-### 4.4 Caderneta
+### 4.3 Caderneta
 
 Controla as operações do sistema de **crédito e caderneta de clientes**.
 
@@ -139,11 +127,27 @@ Controla as operações do sistema de **crédito e caderneta de clientes**.
 |---|---|
 | **Central de Caderneta** | Permite acessar o painel central de gerenciamento da caderneta, com extrato, relatórios e histórico. |
 | **Recebimento** | Permite registrar pagamentos recebidos de clientes que têm saldo devedor na caderneta. |
-| **Venda Sem Limite de Crédito** | Permite lançar compras na caderneta de um cliente mesmo que ele já tenha atingido o limite de crédito configurado. |
-| **Consulta de Vendas** | Permite visualizar o histórico de compras realizadas na caderneta de cada cliente. |
+| **Consulta Vendas** | Permite visualizar o histórico de compras realizadas na caderneta de cada cliente. |
 | **Excluir Vendas** | Permite excluir registros de compras da caderneta. |
 | **Consultar Pagamentos** | Permite visualizar o histórico de pagamentos feitos pelos clientes. |
 | **Excluir Pagamentos** | Permite excluir registros de pagamentos da caderneta. |
+
+> A permissão **Venda Sem Limite de Crédito** (vender na caderneta acima do limite do cliente) fica na aba **Recebimento**, não na aba Caderneta.
+
+---
+
+### 4.4 Terminal
+
+Controla as operações realizadas no **Terminal** (PDV de mesas e comandas).
+
+| Permissão | O que libera |
+|---|---|
+| **Utiliza Terminal** | Permite o acesso ao terminal de lançamento. Sem esta permissão, o terminal não abre. |
+| **Cancelar Item** | Permite cancelar um produto já lançado em uma comanda aberta no terminal. |
+| **Conceder Desconto** | Permite aplicar desconto em pedidos do terminal. Ao ativar, informe o **percentual máximo** permitido (campo **Max (%)**). |
+| **Max (%)** | Limite máximo de desconto que o operador pode conceder no terminal. |
+| **Lançar Item Após Prévia** | Permite adicionar novos itens a uma comanda depois que a prévia já foi impressa. |
+| **Transferência de Comanda** | Permite mover itens ou transferir uma comanda inteira para outra mesa ou comanda. |
 
 ---
 
@@ -229,9 +233,37 @@ Controla a **edição de registros** já existentes. Independente de ter permiss
 
 ---
 
-### 4.8 Pedidos
+### 4.8 Relatórios
 
-Controla as operações do **módulo de Pedidos e Delivery**.
+Controla o acesso a cada grupo de **relatórios** disponíveis no sistema.
+
+| Permissão | O que libera |
+|---|---|
+| **Comandas** | Acesso aos relatórios do módulo de comandas e mesas. |
+| **Produtos** | Acesso aos relatórios de produtos (mais vendidos, curva ABC, CMV, etc.). |
+| **Fechamentos** | Acesso aos relatórios de fechamentos de caixa e divergências. |
+| **Fechamento de Caixa - Lançar Valores** | Permite informar os valores em dinheiro (contagem real) durante o fechamento do caixa. |
+| **Alterar Fechamento Dias** | Quantos dias retroativos o operador pode lançar ou corrigir valores de fechamento. Só tem efeito com "Fechamento de Caixa - Lançar Valores" ativo. |
+| **Faturamento** | Acesso aos relatórios de faturamento (por dia, por turno, por espécie, etc.). |
+| **Cupom** | Acesso aos relatórios de cupons fiscais emitidos e cancelados. |
+| **Lucros** | Acesso aos relatórios de lucratividade e mark-up. |
+| **Vendas** | Acesso aos relatórios de vendas (estatísticas, comparativos, por vendedor, etc.). |
+| **Pedidos** | Acesso aos relatórios do módulo de pedidos e delivery. |
+| **Estoque** | Acesso aos relatórios de estoque (consolidado, movimentação, inventário, etc.). |
+| **Sangria** | Acesso ao relatório de sangrias e suprimentos do caixa. |
+| **Itens Cancelados** | Acesso ao relatório de itens que foram cancelados em vendas. |
+| **Consultas** | Acesso ao módulo Consultas (vendas, sangrias, caderneta, vouchers). |
+| **Personalizados** | Acesso à criação e execução de relatórios personalizados. |
+| **Compras** | Acesso aos relatórios de compras (Curva ABC de Produto). |
+| **Outros** | Acesso a relatórios diversos (histórico de preços, programa de fidelidade, TEF, etc.). |
+
+> **Atenção:** Ter permissão em um grupo de relatórios dá acesso a **todos** os relatórios daquele grupo. Não é possível liberar apenas um relatório específico dentro de um grupo.
+
+---
+
+### 4.9 Delivery/Romaneio
+
+Controla as operações dos módulos de **Delivery e Romaneio** (a aba se chama "Delivery/Romaneio").
 
 | Permissão | O que libera |
 |---|---|
@@ -239,16 +271,16 @@ Controla as operações do **módulo de Pedidos e Delivery**.
 | **Consultar** | Permite visualizar a lista de pedidos e seus detalhes. |
 | **Cancelar Item** | Permite cancelar um item específico dentro de um pedido. |
 | **Cancelar Pedido** | Permite cancelar um pedido inteiro. |
-| **Conceder Desconto** | Permite aplicar desconto em pedidos. Ao ativar, informe o **percentual máximo** permitido. |
-| **Percentual máximo de desconto** | Limite máximo de desconto permitido em pedidos. |
+| **Conceder Desconto** | Permite aplicar desconto em pedidos. Ao ativar, informe o **percentual máximo** permitido (campo **Max (%)**). |
+| **Max (%)** | Limite máximo de desconto permitido em pedidos. |
 | **Vincular Produtos das Integrações** | Permite associar produtos do SAG com produtos de plataformas externas (iFood, etc.). |
 | **Alterar Pedidos** | Permite editar pedidos já lançados (produtos, quantidades, endereço, etc.). |
 | **Alterar Pedidos em Entrega/Entregues** | Permite modificar pedidos que já saíram para entrega ou que foram marcados como entregues. |
-| **Cancelar Item Antes de Finalizar** | Permite cancelar itens de um pedido antes que ele seja completamente finalizado. |
+| **Cancelar Item Antes De Finalizar** | Permite cancelar itens de um pedido antes que ele seja completamente finalizado. |
 
 ---
 
-### 4.9 Estoque
+### 4.10 Estoque
 
 Controla as operações do **módulo de Estoque**.
 
@@ -267,7 +299,7 @@ Controla as operações do **módulo de Estoque**.
 
 ---
 
-### 4.10 NF-e
+### 4.11 NF-e
 
 Controla as operações de **Nota Fiscal Eletrônica**.
 
@@ -281,7 +313,7 @@ Controla as operações de **Nota Fiscal Eletrônica**.
 
 ---
 
-### 4.11 Financeiro
+### 4.12 Financeiro
 
 Controla as operações do **módulo Financeiro**.
 
@@ -294,11 +326,10 @@ Controla as operações do **módulo Financeiro**.
 | **Efetivar Contas** | Permite confirmar o pagamento ou recebimento de uma conta, marcando-a como liquidada. |
 | **Cancelar Contas** | Permite cancelar lançamentos financeiros. |
 | **Alterar Contas** | Permite editar dados de contas a pagar ou receber ainda não efetivadas. |
-| **Alterar Contas Efetivadas** | Permite modificar contas já liquidadas. Ao ativar, informe em quantos **dias** após a efetivação ainda é possível alterar. |
-| **Dias para alterar efetivados** | Define o prazo (em dias) para que uma conta efetivada ainda possa ser modificada. |
+| **Alterar Contas Efetivadas** | Permite modificar contas já liquidadas. Ao ativar, informe em quantos **dias** após a efetivação ainda é possível alterar (campo **Dias**, padrão 10). |
+| **Dias** | Define o prazo (em dias) para que uma conta efetivada ainda possa ser modificada. |
 | **Lançar Ajustes de Saldo** | Permite fazer correções manuais no saldo de uma conta bancária. |
 | **Consultar** | Permite visualizar o extrato financeiro, contas a pagar e a receber. |
-| **Central de Faturas** | Permite acessar e operar a central de emissão e controle de faturas/boletos. |
 | **Lançar Extrato — Funcionário** | Permite registrar movimentações no extrato financeiro individual de um funcionário. |
 | **Lançar Financeiro — Funcionário** | Permite lançar contas a pagar ou a receber vinculadas a funcionários. |
 | **Conciliações** | Permite realizar a conciliação bancária e a conciliação de recebíveis (comparar extrato do banco com os lançamentos do sistema). |
@@ -306,32 +337,18 @@ Controla as operações do **módulo Financeiro**.
 
 ---
 
-### 4.12 Relatórios
+### 4.13 Recebimento
 
-Controla o acesso a cada grupo de **relatórios** disponíveis no sistema.
+Aba pequena, com duas permissões que envolvem crédito concedido ao cliente.
 
 | Permissão | O que libera |
 |---|---|
-| **Comandas** | Acesso aos relatórios do módulo de comandas e mesas. |
-| **Produtos** | Acesso aos relatórios de produtos (mais vendidos, curva ABC, CMV, etc.). |
-| **Fechamentos** | Acesso aos relatórios de fechamentos de caixa e divergências. |
-| **Faturamento** | Acesso aos relatórios de faturamento (por dia, por turno, por espécie, etc.). |
-| **Cupom** | Acesso aos relatórios de cupons fiscais emitidos e cancelados. |
-| **Lucros** | Acesso aos relatórios de lucratividade e mark-up. |
-| **Vendas** | Acesso aos relatórios de vendas (estatísticas, comparativos, por vendedor, etc.). |
-| **Pedidos** | Acesso aos relatórios do módulo de pedidos e delivery. |
-| **Estoque** | Acesso aos relatórios de estoque (consolidado, movimentação, inventário, etc.). |
-| **Sangria** | Acesso ao relatório de sangrias e suprimentos do caixa. |
-| **Itens Cancelados** | Acesso ao relatório de itens que foram cancelados em vendas. |
-| **Outros** | Acesso a relatórios diversos (histórico de preços, programa de fidelidade, TEF, etc.). |
-| **Consultas** | Acesso a relatórios gerais de consulta. |
-| **Personalizados** | Acesso à aba de criação e execução de relatórios personalizados. |
-
-> **Atenção:** Ter permissão em um grupo de relatórios dá acesso a **todos** os relatórios daquele grupo. Não é possível liberar apenas um relatório específico dentro de um grupo.
+| **Venda Sem Limite de Crédito** | Permite lançar compras na caderneta de um cliente mesmo que ele já tenha atingido o limite de crédito configurado. |
+| **Central de Faturas** | Permite acessar e operar a Central de Faturas (emissão e controle de faturas/boletos). |
 
 ---
 
-### 4.13 Outros
+### 4.14 Outros
 
 Permissões diversas que controlam funcionalidades específicas do sistema.
 
@@ -341,10 +358,12 @@ Permissões diversas que controlam funcionalidades específicas do sistema.
 | **Arquivos da Balança** | Permite gerenciar os arquivos de produtos enviados para a balança eletrônica. |
 | **Alterar Status Impressora** | Permite ativar ou desativar impressoras cadastradas no sistema. |
 | **Tela de Pedidos** | Permite acessar a tela avançada de acompanhamento de pedidos (produção, entregas, kanban). |
+| **Gerenciar KDS** | Permite criar e configurar as telas KDS (Tela de Pedidos). |
 | **Módulo IA** | Permite acessar as funcionalidades de inteligência artificial disponíveis no SAG. |
 | **Cadastrar Notificações** | Permite criar e editar notificações do sistema para os operadores. |
 | **Gerenciar Notificações de Terceiros** | Permite gerenciar notificações oriundas de integrações externas. |
-| **Auto Serviço** | Permite acessar e operar a tela de auto-atendimento (totem). |
+| **Auto Serviço** | Permite acessar e operar a tela de auto-serviço. |
+| **Acesso a Configurações** | Permite abrir as telas de configuração restritas (Ferramentas, Config Espécies, etc.) sem validação adicional do suporte. |
 
 ---
 
@@ -363,6 +382,7 @@ Perfil básico para quem opera o caixa e não precisa acessar configurações.
 | Caixa | Utiliza Caixa, Abrir Gaveta, Finalizar Caixa, Lançar Sangria, Venda com Estoque Negativo, Devolução de Venda, Colocar Venda em Espera, Visualizar Últimas Vendas |
 | Caderneta | Recebimento |
 | Consultas | Clientes, Produtos |
+| Relatórios | Fechamento de Caixa - Lançar Valores (se o terminal usa lançamento de valores no fechamento) |
 
 ---
 
@@ -372,9 +392,9 @@ Perfil para quem registra e acompanha pedidos, sem acesso ao caixa.
 
 | Setor | Permissões recomendadas |
 |---|---|
-| Pedidos | Lançamento de Pedidos, Consultar, Cancelar Item, Cancelar Pedido |
+| Delivery/Romaneio | Lançamento de Pedidos, Consultar, Cancelar Item, Cancelar Pedido |
 | Cadastros | Clientes |
-| Consultas | Clientes, Produtos, Pedido de Compra |
+| Consultas | Clientes, Produtos |
 | Relatórios | Pedidos |
 
 ---
@@ -385,14 +405,15 @@ Perfil para supervisores com acesso amplo, mas sem configurações administrativ
 
 | Setor | Permissões recomendadas |
 |---|---|
-| Caixa | Todas, incluindo Cancelar Venda, Desconto (com % definido), Trocar Forma de Pagamento |
+| Caixa | Todas, incluindo Cancelar Venda, Desconto (com Max % definido), Trocar Forma de Pagamento |
 | Terminal | Todas |
 | Comandas | Todas |
 | Caderneta | Todas |
+| Recebimento | Todas |
 | Cadastros | Todas |
 | Consultas | Todas |
 | Alterações | Todas |
-| Pedidos | Todas |
+| Delivery/Romaneio | Todas |
 | Estoque | Todas |
 | Relatórios | Todas |
 | Financeiro | Consultar, Efetivar, Alterar Contas, Adicionar Contas a Pagar e Receber |
@@ -420,7 +441,8 @@ Perfil para responsável pelo financeiro, sem acesso ao caixa ou estoque.
 | Setor | Permissões recomendadas |
 |---|---|
 | Financeiro | Todas |
-| Relatórios | Faturamento, Lucros, Vendas, Outros |
+| Recebimento | Central de Faturas |
+| Relatórios | Faturamento, Lucros, Vendas, Consultas, Outros |
 | Consultas | Clientes, Fornecedores |
 
 ---
@@ -428,6 +450,6 @@ Perfil para responsável pelo financeiro, sem acesso ao caixa ou estoque.
 ## Observações Gerais
 
 - Permissões de **Consultar** e **Alterar** são independentes — um operador pode ter permissão para consultar clientes sem poder editá-los.
-- Permissões com **campo de valor** (como percentual máximo de desconto ou dias para alterar fechamento) só têm efeito quando a permissão pai está ativa.
-- Ao alterar as permissões de um grupo, **todos os operadores vinculados são afetados imediatamente**, sem necessidade de reiniciar o sistema.
+- Permissões com **campo de valor** (como Max (%) de desconto ou dias para alterar fechamento) só têm efeito quando a permissão pai está ativa.
+- Ao alterar as permissões de um grupo, os operadores vinculados **precisam fazer logout e login** para que a mudança seja aplicada — as permissões são lidas no login.
 - O usuário do tipo **Administrador** ignora completamente o sistema de permissões e tem acesso irrestrito a tudo.

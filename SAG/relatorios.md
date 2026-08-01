@@ -1,17 +1,22 @@
 # SAG — Relatórios
 
-Módulo de geração de relatórios gerenciais e fiscais. Total de relatórios disponíveis: 91.
+Módulo de geração de relatórios gerenciais e fiscais.
 
 ---
 
 ## Como Acessar
 
-A maioria dos relatórios fica na **Aba Relatórios** do SAG. Selecione o módulo no menu lateral, defina os filtros e clique em **Gerar Relatório**.
+A maioria dos relatórios fica na **Aba Relatórios** do SAG. Cada card abre uma janela com os relatórios em abas — selecione a aba, defina os filtros e clique em **Gerar Relatório**.
 
-> **Atenção:** Os módulos Financeiro, Estoque e Pedidos possuem aba própria no SAG — os relatórios desses módulos ficam dentro da respectiva aba, não na Aba Relatórios.
+**Cards da aba Relatórios:** Personalizados, Fechamento de Caixa, Faturamento, Consultas, Itens Cancelados, Notas, Vendas, Listagem, Caderneta, Entradas e Saídas, Comandas Abertas, Venda por Usuário, Comissões, Lucros e MarkUp, Compras, Outros.
+
+> **Atenção:** Os módulos Financeiro, Estoque, Produções e Delivery/Romaneio possuem aba própria no SAG — os relatórios desses módulos ficam dentro da respectiva aba, não na Aba Relatórios.
 > - **Financeiro:** Aba Financeiro → Relatórios → (nome do relatório)
 > - **Estoque:** Aba Estoque → Relatórios → (nome do relatório)
-> - **Pedidos/Delivery:** Aba Pedidos → Relatórios → (nome do relatório)
+> - **Produções:** Aba Produções → Relatórios → (nome do relatório)
+> - **Delivery / Romaneio:** Aba Delivery (ou Romaneio) → Relatórios → (nome do relatório)
+
+> O acesso a cada grupo é liberado pelas permissões da aba **Relatórios** do grupo de permissões. Ver [Grupos de Permissão](grupos-permissoes.md).
 
 ---
 
@@ -29,11 +34,11 @@ A maioria dos relatórios fica na **Aba Relatórios** do SAG. Selecione o módul
 | **Faturamento Por Usuário** | Relatórios → Faturamento → Por Usuário | Total faturado por operador de caixa, com gráfico comparativo |
 | **Faturamento Por Caixa** | Relatórios → Faturamento → Por Caixa | Total faturado por terminal (PDV) no período |
 | **Faturamento Por Tipo de Pedido** | Relatórios → Faturamento → Por Tipo de Pedido | Por modalidade (mesa, balcão, delivery etc.), agrupável por Ano/Mês/Dia/Hora |
-| **Faturamento Comparativo** | Relatórios → Faturamento → Comparativo | Compara dois períodos distintos com gráfico de barras |
-| **Faturamento Consolidado** | Relatórios → Faturamento → Consolidado | Visão consolidada e totalizadora do período, sem subdivisões |
-| **Faturamento Por Projeção** | Relatórios → Faturamento → Por Projeção | Projeta faturamento futuro com base em histórico de referência |
-| **Faturamento Multi-Loja** | Relatórios → Faturamento → Multi-Loja | Consolida faturamento de todas as unidades da rede |
-| **Faturamento Comparativo Multi-Loja** | Relatórios → Faturamento → Comparativo Multi-Loja | Compara duas unidades em dois períodos distintos |
+| **Comparativo** | Relatórios → Faturamento → Comparativo | Compara dois períodos distintos com gráfico de barras |
+| **Consolidado** | Relatórios → Faturamento → Consolidado | Visão consolidada e totalizadora do período, sem subdivisões |
+| **Projetado** | Relatórios → Faturamento → Projetado | Projeta faturamento futuro com base em histórico de referência |
+| **Multiloja - Comparativo** | Relatórios → Faturamento → Multiloja - Comparativo | Compara unidades da rede em períodos distintos |
+| **Multiloja - Por Loja** | Relatórios → Faturamento → Multiloja - Por Loja | Consolida o faturamento de todas as unidades, separado por loja |
 
 ---
 
@@ -64,8 +69,10 @@ A maioria dos relatórios fica na **Aba Relatórios** do SAG. Selecione o módul
 | **Vendas por Cliente** | Relatórios → Vendas → Vendas por Cliente | Histórico de compras por cliente: total consumido, visitas, ticket médio |
 | **Vendas - Multiloja** | Relatórios → Vendas → Vendas - Multiloja | Consolida venda de produtos entre todas as unidades, comparando por loja |
 | **Pesquisa de Vendas** | Relatórios → Vendas → Pesquisa de Vendas | Consulta avançada por data, cliente, usuário, valor ou produto |
+| **Exportar Dados** | Relatórios → Vendas → Exportar Dados | Exporta os dados de venda do período para planilha / BI |
 | **Taxa de Serviço** | Relatórios → Vendas → Taxa de Serviço | Valores de taxa de serviço (gorjeta) por usuário, turno ou dia |
-| **Vendas por Funcionário** | Relatórios → Vendas por Funcionário | Total vendido por funcionário/atendente — analítico ou resumido |
+
+> **Venda por Usuário** é um card próprio da aba Relatórios (não uma aba dentro de Vendas): **Relatórios → Venda por Usuário** — total vendido por funcionário/atendente, analítico ou resumido.
 
 ---
 
@@ -92,13 +99,46 @@ A maioria dos relatórios fica na **Aba Relatórios** do SAG. Selecione o módul
 
 ---
 
-## Módulo: Fechamentos de Caixa
+## Módulo: Fechamento de Caixa
+
+**Caminho base:** Relatórios → **Fechamento de Caixa**
 
 | Relatório | Caminho | Descrição |
 |---|---|---|
-| **Fechamento de Caixa** | Relatórios → Fechamentos de Caixa → (selecionar fechamento) | Relatório completo de um fechamento: totais por forma de pagamento, sangrias, suprimentos e resultado líquido |
-| **Divergências de Fechamento** | Relatórios → Divergências de Fechamentos de Caixa | Diferença entre valor calculado pelo sistema e valor informado pelo operador no fechamento |
-| **Sangrias** | Relatórios → Sangrias | Todas as retiradas de dinheiro dos caixas: data, horário, usuário, valor e justificativa |
+| **Por Dia** | Relatórios → Fechamento de Caixa → Por Dia | Fechamentos consolidados dia a dia |
+| **Por Período** | Relatórios → Fechamento de Caixa → Por Período | Fechamentos consolidados no intervalo escolhido |
+| **Caixas Detalhados** | Relatórios → Fechamento de Caixa → Caixas Detalhados | Detalhamento de cada caixa: totais por forma de pagamento, sangrias, suprimentos e resultado líquido |
+| **Divergências** | Relatórios → Fechamento de Caixa → Divergências | Diferença entre o valor calculado pelo sistema e o valor informado pelo operador |
+
+---
+
+## Módulo: Entradas e Saídas (Sangrias)
+
+| Relatório | Caminho | Descrição |
+|---|---|---|
+| **Entradas e Saídas** | Relatórios → Entradas e Saídas | Todas as retiradas e entradas de dinheiro dos caixas: data, horário, usuário, valor e justificativa |
+
+---
+
+## Módulo: Consultas
+
+**Caminho base:** Relatórios → **Consultas**
+
+| Relatório | Caminho | Descrição |
+|---|---|---|
+| **Vendas** | Relatórios → Consultas → Vendas | Consulta das vendas realizadas com filtros detalhados |
+| **Sangrias** | Relatórios → Consultas → Sangrias | Consulta das sangrias lançadas |
+| **Vendas na Caderneta** | Relatórios → Consultas → Vendas na Caderneta | Compras lançadas na caderneta dos clientes |
+| **Pagamentos na Caderneta** | Relatórios → Consultas → Pagamentos na Caderneta | Pagamentos recebidos na caderneta |
+| **Voucher** | Relatórios → Consultas → Voucher | Vouchers gerados e utilizados |
+
+---
+
+## Módulo: Compras
+
+| Relatório | Caminho | Descrição |
+|---|---|---|
+| **Curva ABC de Produto** | Relatórios → Compras → Curva ABC de Produto | Classifica os produtos comprados por representatividade no valor total das compras |
 
 ---
 
@@ -116,6 +156,7 @@ A maioria dos relatórios fica na **Aba Relatórios** do SAG. Selecione o módul
 | **Fluxo de Caixa** | Financeiro → Relatórios → Fluxo de Caixa | Entradas e saídas financeiras com saldo diário e acumulado |
 | **DRE** | Financeiro → Relatórios → DRE | Demonstração de Resultado do Exercício: receitas, custos e apuração de lucro/prejuízo |
 | **Contas a Pagar Por Grupo Fornecedor** | Financeiro → Relatórios → Contas a Pagar Por Grupo Fornecedor | Contas a pagar agrupadas por categoria de fornecedor |
+| **Curva ABC de Fornecedor** | Financeiro → Relatórios → Curva ABC de Fornecedor | Classifica os fornecedores por representatividade no valor total pago |
 
 ---
 
@@ -164,15 +205,21 @@ A maioria dos relatórios fica na **Aba Relatórios** do SAG. Selecione o módul
 
 | Relatório | Caminho | Descrição |
 |---|---|---|
-| **Comissões de Funcionários** | Relatórios → Comissões de Funcionários | Comissões devidas por funcionário com base nas vendas. Analítico ou sintético. Permite informar percentual de desconto |
+| **Comissões** | Relatórios → Comissões | Tela de Lançamento de Comissões: apura as comissões devidas por funcionário com base nas vendas e permite lançá-las no financeiro |
 
 ---
 
-## Módulo: Produção
+## Módulo: Produções
+
+> **Atenção:** estes relatórios ficam na aba **Produções → Relatórios**, não na Aba Relatórios.
 
 | Relatório | Caminho | Descrição |
 |---|---|---|
-| **Produção** | Relatórios → Produção | Itens enviados à produção (cozinha, bar etc.): produtos, quantidades, horários e status. Filtrável por grupo, status, origem e tipo de pedido |
+| **Produções** | Produções → Relatórios → Produções | Produções realizadas no período: produtos, quantidades, horários e status |
+| **Embalagem - Validade** | Produções → Relatórios → Embalagem - Validade | Embalagens produzidas e suas datas de validade |
+| **Receita** | Produções → Relatórios → Receita | Fichas técnicas / receitas cadastradas |
+
+> O relatório de itens enviados à **produção da cozinha** a partir de pedidos fica em **Delivery → Relatórios → Produção**.
 
 ---
 
@@ -192,24 +239,26 @@ A maioria dos relatórios fica na **Aba Relatórios** do SAG. Selecione o módul
 
 ---
 
-## Módulo: Pedidos
+## Módulo: Pedidos (Delivery / Romaneio)
 
-> **Atenção:** estes relatórios ficam na **Aba Pedidos → Relatórios**, não na Aba Relatórios.
+> **Atenção:** estes relatórios ficam na aba **Delivery → Relatórios** (ou **Romaneio → Relatórios**), não na Aba Relatórios.
 
 | Relatório | Caminho | Descrição |
 |---|---|---|
-| **Produção (Pedidos)** | Pedidos → Relatórios → Produção | Itens enviados à produção a partir de pedidos. Filtrável por tipo de data, grupo, status, origem e tipo |
-| **Pedidos Resumidos** | Pedidos → Relatórios → Pedidos Resumidos | Totais de cada pedido sem detalhamento de itens (visão rápida) |
-| **Pedidos Por Origem** | Pedidos → Relatórios → Pedidos Por Origem | Pedidos por canal de origem (iFood, SAG, WhatsApp, telefone, balcão etc.) |
-| **Pedidos Completos** | Pedidos → Relatórios → Pedidos Completos | Detalhamento completo: itens, valores, status, pagamento e dados do cliente |
-| **Pedidos Por Entregador** | Pedidos → Relatórios → Pedidos Por Entregador | Entregas por motoboy/entregador: quantidade e valor total das entregas |
-| **Pedidos Por Usuário** | Pedidos → Relatórios → Pedidos Por Usuário | Pedidos registrados por cada operador/atendente |
-| **Consulta de Vendas (Pedidos)** | Pedidos → Relatórios → Consulta de Vendas | Vendas originadas de pedidos, filtrável por data, cliente, usuário e produto |
-| **Produtos Por Pedido** | Pedidos → Relatórios → Produtos por Pedido | Produtos consumidos em cada pedido: quantidade, valor unitário e total |
-| **Resumo de Pedidos** | Pedidos → Relatórios → Resumo de Pedidos | Painel com indicadores: total de pedidos, valor total, ticket médio, pedidos por hora |
-| **Histórico dos Pedidos** | Pedidos → Relatórios → Histórico dos Pedidos | Histórico cronológico com status de cada pedido (aberto, fechado, cancelado) |
-| **Taxas Por Origem** | Pedidos → Relatórios → Taxas por Origem | Taxas cobradas (entrega, serviço) segmentadas por canal de origem |
-| **Pedidos Alterados** | Pedidos → Relatórios → Pedidos Alterados | Pedidos que sofreram modificações: o que foi alterado, quem alterou e quando |
+| **Produção** | Delivery → Relatórios → Produção | Itens enviados à produção a partir de pedidos. Filtrável por tipo de data, grupo, status, origem e tipo |
+| **Pedidos Resumidos** | Delivery → Relatórios → Pedidos Resumidos | Totais de cada pedido sem detalhamento de itens (visão rápida) |
+| **Pedidos Por Origem** | Delivery → Relatórios → Pedidos Por Origem | Pedidos por canal de origem (iFood, SAG, WhatsApp, telefone, balcão etc.) |
+| **Pedidos Completos** | Delivery → Relatórios → Pedidos Completos | Detalhamento completo: itens, valores, status, pagamento e dados do cliente |
+| **Pedidos Por Entregador** | Delivery → Relatórios → Pedidos Por Entregador | Entregas por motoboy/entregador: quantidade e valor total das entregas |
+| **Pedidos Por Usuário** | Delivery → Relatórios → Pedidos Por Usuário | Pedidos registrados por cada operador/atendente |
+| **Consulta de Vendas** | Delivery → Relatórios → Consulta de Vendas | Vendas originadas de pedidos, filtrável por data, cliente, usuário e produto |
+| **Produtos Por Pedido** | Delivery → Relatórios → Produtos por Pedido | Produtos consumidos em cada pedido: quantidade, valor unitário e total |
+| **Resumo de Pedidos** | Delivery → Relatórios → Resumo de Pedidos | Painel com indicadores: total de pedidos, valor total, ticket médio, pedidos por hora |
+| **Histórico dos Pedidos** | Delivery → Relatórios → Histórico dos Pedidos | Histórico cronológico com status de cada pedido (aberto, fechado, cancelado) |
+| **Taxas Por Origem** | Delivery → Relatórios → Taxas por Origem | Taxas cobradas (entrega, serviço) segmentadas por canal de origem |
+| **Tempo por Status** | Delivery → Relatórios → Tempo por Status | Quanto tempo os pedidos ficam em cada status — mede gargalos na operação |
+| **Exportar Dados** | Delivery → Relatórios → Exportar Dados | Exporta os pedidos do período (detalhados ou resumidos) para planilha / BI |
+| **Pedidos Alterados** | Delivery → Relatórios → Pedidos Alterados | Pedidos que sofreram modificações: o que foi alterado, quem alterou e quando |
 
 ---
 
@@ -237,7 +286,7 @@ A maioria dos relatórios fica na **Aba Relatórios** do SAG. Selecione o módul
 
 ## Relatórios Personalizados
 
-**Caminho:** Relatórios → **Personalizar**
+**Caminho:** Relatórios → **Personalizados**
 
 Permite criar relatórios totalmente sob medida, combinando informações de diferentes partes do sistema — vendas, clientes, produtos, pedidos — sem depender de um relatório pronto. Os relatórios criados ficam salvos e podem ser reutilizados, editados ou removidos.
 

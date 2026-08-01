@@ -33,6 +33,24 @@ O SAG Mobile é a versão mobile do terminal de comandas do SAG. Garçons e aten
 - Celular ou tablet Android
 - Conexão Wi-Fi na mesma rede do servidor SAG
 - Servidor SAG ligado e com o sistema aberto
+- Dispositivo cadastrado em **Outros → Conf. Dispositivos Móveis**
+
+---
+
+## Cadastro dos dispositivos no SAG
+
+**Caminho:** Outros > **Conf. Dispositivos Móveis**
+
+A tela tem duas listas, uma para cada tipo de dispositivo:
+
+| Lista | Uso |
+|---|---|
+| **Sag.App** | Aplicativo SAG Mobile (celular do garçom). Cada registro tem Código, Nome e Equipamento |
+| **Tablet** | Tablets usados como terminal. Cada registro tem Código e Nome |
+
+Use o botão **adicionar** de cada lista para cadastrar um novo dispositivo.
+
+> A configuração inicial e a vinculação do aparelho são feitas pela equipe técnica T4L.
 
 ---
 

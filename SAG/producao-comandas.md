@@ -126,12 +126,17 @@ Vincula ingredientes (itens de estoque) a um produto final.
 - Útil para controle de custo de produção
 
 ### Acompanhamento de Produção
-**Caminho:** Menu Principal > **Acompanhamento** (ou via tela de produção)
+O acompanhamento em tempo real dos itens em preparo é feito pela **Tela de Pedidos (KDS)** — ver seção abaixo. Não existe um card "Acompanhamento" no menu.
 
 Exibe os pedidos em fila organizados por impressora/setor:
 - Pedidos **pendentes** (aguardando preparo)
 - Pedidos **em produção**
 - Pedidos **prontos** (aguardando retirada/entrega)
+
+### Alertas Garçom
+**Caminho:** Aba **Principal** > **Alertas Garçom**
+
+Painel dos chamados feitos pelas mesas (pedido de atendimento, conta, etc.), para o salão acompanhar em tempo real.
 
 ### Regras de Impressão (Roteamento para Produção)
 
@@ -148,7 +153,9 @@ Exemplo:
 
 ## Tela de Pedidos (KDS — Kitchen Display System)
 
-**Caminho:** Menu Principal > **Tela de Pedidos**
+**Caminho:** Aba **Principal** > **KDS - Tela de Pedidos**
+
+O card abre a **lista das telas KDS configuradas** — cada tela pode ser montada para um setor (cozinha, bar, chapa etc.). A partir dela você abre a tela de exibição propriamente dita.
 
 Interface exibida na cozinha ou área de produção mostrando os pedidos em tempo real (similar aos painéis de redes de fast food):
 - Número do pedido
@@ -156,6 +163,8 @@ Interface exibida na cozinha ou área de produção mostrando os pedidos em temp
 - Mesa ou cliente
 - Tempo desde o lançamento
 - Botão para marcar como **Pronto**
+
+> Acesso controlado pelas permissões **Outros → Tela de Pedidos** (usar) e **Outros → Gerenciar KDS** (criar/configurar telas).
 
 ---
 

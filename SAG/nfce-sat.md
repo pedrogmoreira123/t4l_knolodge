@@ -55,14 +55,16 @@ de cupom ao consumidor final.
 **Caminho:** Outros > **Exportar XML**
 
 1. Informe o **período** (Início e Término)
-2. Selecione os tipos a incluir: **NFC-e**, **NF-e**
+2. Selecione os tipos a incluir: **NFCe**, **NFE - Emitidas**, **NFE - Recebidas**
 3. Marque as opções desejadas:
    - **Incluir Canceladas**
    - **Incluir Relatório**
    - **Incluir Inutilizadas**
    - **Incluir DANFE**
-4. Para enviar por e-mail: marque **Enviar arquivos por email** e informe o endereço
-5. Clique em **Gerar** — o arquivo é gerado no computador ou enviado por e-mail
+   - **Buscar Online Cupons Faltantes (SAE SP)** — apenas para SP, busca na SEFAZ os cupons que não estão no banco local
+4. Em **Escolher pasta de destino**, clique em **Selecionar...** e indique onde salvar
+5. Para enviar por e-mail: marque **Enviar arquivos por email** e informe o **Email** (e a **Cópia**, se quiser)
+6. Clique em **gerar** — o arquivo é gerado na pasta escolhida ou enviado por e-mail
 
 > Use este caminho para enviar os XMLs mensais à contabilidade.
 
@@ -94,17 +96,19 @@ O certificado digital é obrigatório para emissão de NFC-e. Existem dois tipos
 
 | Tipo | Formato | Descrição |
 |---|---|---|
-| **A1** | Arquivo `.pfx` | Arquivo digital salvo no computador — o mais comum |
-| **A3** | Token/cartão físico | Dispositivo físico conectado por USB |
+| **A1 - Arquivo** | `.pfx` / `.p12` | Arquivo digital salvo no computador — o mais comum (**recomendado** pelo SAG) |
+| **A3 - Cartão** | Token / Smart Card | Dispositivo físico conectado por USB |
 
 ### Aplicar Certificado A1 no SAG
 
 1. Acesse **Outros > Certificado Digital**
-2. Selecione o tipo **A1**
-3. Clique em buscar arquivo e selecione o arquivo `.pfx`
+2. Na pergunta "Qual o tipo do seu certificado?", escolha **A1 - Arquivo**
+3. Clique em buscar arquivo e selecione o arquivo `.pfx` ou `.p12`
 4. Informe a **senha do certificado**
 5. Clique em **Salvar**
 6. **Feche e reabra o SAG** para aplicar
+
+> A tela de certificado também tem as opções **Trocar Certificado** (substituir o atual) e **Adquirir Novo Certificado**.
 
 ### Informações Importantes
 
